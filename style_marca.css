@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho: */
+header {
+    background-color: #111110;
+    padding: 20px;
+    /* position: fixed; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: auto;
+}
+
+.botoes {
+    display: flex;
+    gap: 8px;
+    /* Espaço entre os botões */
+    margin-top: 5px;
+}
+
+.botoes .redes {
+    padding-left: 1500px;
+    display: flex;
+    gap: 8px;
+    /* Espaço entre os botões */
+    margin-top: 5px;
+}
+
+.botoes button {
+    background-color: #111110;
+    /* Fundo */
+    color: #fc6424;
+    /* Cor do texto */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 2px solid #111110;
+    border-radius: 20px;
+    /* Tamanho interno */
+    padding: 10px 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Animação suave */
+}
+
+/* Efeito ao passar o mouse */
+.botoes button:hover {
+    background-color: #eba75a;
+    color: #000000;
+    border-color: #111110;
+}
+
+.botao-imagem {
+    width: 30px;
+    /* tamanho da imagem */
+    height: 30px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.secao-heroi {
+    background-color: #111110;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.linha_tempo {
+    width: 50em;
+    height: auto;
+    gap: 8px;
+}
+
+.secao-heroi h1 {
+    font-size: 22em;
+    font-family: Anton;
+    /*A PORCARIA DA FONTE QUE VOCÊ PSSOU MEIA HORA PROCURANDO*/
+    color: #fc6424;
+    line-height: 12rem;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    margin-bottom: 7rem;
+    text-align: center;
+    letter-spacing: 5px;
+    /* text-shadow:
+    0 0 1px #ff4a00,
+    0 0 1px #ff4a00,
+    0 0 240px #8f4f36; */
+}
+
+.secao-heroi p {
+    font-size: 2em;
+    font-family: Anton;
+    /*A PORCARIA DA FONTE QUE VOCÊ PSSOU MEIA HORA PROCURANDO*/
+    color: #fc6424;
+    line-height: 2rem;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    margin-bottom: 7rem;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+
+.secao-conteudo {
+    background-image: url("./img/fundo.png");
+    /* tua imagem de fundo */
+    background-size: cover;
+    /* cobre toda a área */
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* evita repetição */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    /* pra manter camadas */
+    padding-bottom: 80px;
+
+}
+
+.secao-conteudo h2 {
+    font-family: Anton;
+    font-size: 9em;
+    line-height: 100px;
+    margin-top: 7rem;
+    /* muda o espaço de cima dela com a seção */
+    margin-bottom: 5rem;
+    /* tira o espaço inferior par img ficar em cima  */
+    color: #111110;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.secao-conteudo h2 span {
+    font-size: 1em;
+    line-height: 100px;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    font-style: italic;
+    margin-top: 7rem;
+    color: rgb(17, 16, 16);
+    font-family: Anton;
+    letter-spacing: 5px;
+    z-index: 1;
+}
+
+.container-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    /* ALTERADO: Garante que o contêiner ocupa toda a largura */
+    max-width: 1200px;
+    /* ADICIONADO: Define uma largura máxima para o contêiner */
+    margin: 0 auto;
+    /* ADICIONADO: Centraliza o contêiner na página */
+    gap: 30px;
+
+}
+
+.caixa-conteudo {
+    background-color: #fff;
+    color: #111;
+    text-decoration: none;
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.caixa-conteudo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.caixa-conteudo h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #fc7434;
+    font-family: Anton, sans-serif;
+}
+
+.caixa-conteudo p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+
+.secao-depoimento {
+    background-color: #111110;
+}
+
+.secao-depoimento h2 {
+    font-size: 8em;
+    background-color: #111110;
+    line-height: 135px;
+    color: #fc7434;
+    font-family: Anton;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: -1px;
+}
+
+.secao-depoimento P {
+    font-size: 1em;
+    background-color: #111110;
+    line-height: 80px;
+    color: #fc6424;
+    margin-left: 40px;
+    font-family: Anton;
+    text-align: left;
+    letter-spacing: 2px;
+    padding-bottom: 8px;
+}
+
+/* CSS específico para a seção mapa */
+
+.mapa {
+    background-image: url("./img/fundo.png");
+    /* tua imagem de fundo */
+    background-size: cover;
+    /* cobre toda a área */
+    padding: 40px 20px;
+    padding-bottom: 80px;
+    align-items: center;
+}
+
+.mapa h2 {
+    font-size: 8rem;
+    color: #111;
+    font-family: anton;
+    text-align: center;
+}
+
+.mapa .texto-descricao {
+    font-size: 1.5rem;
+    color: #111110;
+    margin-bottom: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.mapa .mapaLOC {
+    width: 60%;
+    height: 650px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    padding-left: 350px;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 2px;
+    text-align: center;
+}

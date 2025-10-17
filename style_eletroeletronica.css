@@ -1,0 +1,598 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111110;
+    font-family: Anton;
+    /*A PORCARIA DA FONTE QUE VOCÊ PSSOU MEIA HORA PROCURANDO*/
+    color: #fc6424;
+    text-align: center;
+}
+
+.botoes {
+    padding-left: 30px;
+    padding-top: 25px;
+    display: flex;
+    gap: 8px;
+    /* Espaço entre os botões */
+    margin-top: 5px;
+}
+
+.botoes .icones {
+    padding-left: 1500px;
+    padding-top: 2px;
+    display: flex;
+    gap: 8px;
+    /* Espaço entre os botões */
+    margin-top: 5px;
+}
+
+.botoes button {
+    background-color: #11111000;
+    /* Fundo */
+    color: #fc6424;
+    /* Cor do texto */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 2px solid #11111000;
+    border-radius: 20px;
+    /* Tamanho interno */
+    padding: 10px 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Animação suave */
+}
+
+/* Efeito ao passar o mouse */
+.botoes button:hover {
+    background-color: #eba75a;
+    color: #000000;
+    border-color: #111110;
+}
+
+.botao-imagem {
+    width: 30px;
+    /* tamanho da imagem */
+    height: 30px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.titulo {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    width: auto;
+    background-image: url("./img/fundo_eletroeletronica.png");
+    /* tua imagem de fundo */
+    background-size: cover;
+    /* cobre toda a área */
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* evita repetição */
+    text-align: center;
+    position: relative;
+}
+
+.titulo h1 {
+    padding-bottom: 200px;
+    padding-top: 60px;
+    font-size: 15em;
+    font-weight: 900;
+    line-height: 240px;
+    letter-spacing: 5px;
+    z-index: 2;
+}
+
+.titulo em {
+    font-style: italic;
+}
+
+
+.componentes {
+    padding: 60px 10%;
+    border-bottom: 2px solid #fc6424;
+}
+
+.componentes h2 {
+    font-size: 8em;
+    line-height: 120px;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    margin-bottom: 80px;
+    margin-top: 5rem;
+    color: #fc6424;
+    font-family: Anton;
+    letter-spacing: 5px;
+}
+
+
+.componentes p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sensores {
+    padding: 60px 10%;
+    background-image: url("./img/fundo.png");
+    /* tua imagem de fundo */
+    background-size: cover;
+    /* cobre toda a área */
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* evita repetição */
+    border-bottom: 2px solid #fc6424;
+}
+
+.sensores h2 {
+    font-size: 7em;
+    line-height: 120px;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    margin-bottom: 80px;
+    margin-top: 5rem;
+    color: #111110;
+    font-family: Anton;
+    letter-spacing: 5px;
+}
+
+
+.sensores p {
+    /* font-weight:bold; */
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #111110;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sensores em {
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #111110;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.imagens1 {
+    position: relative;
+    width: 280px;
+    height: 220px;
+    border: 3px solid #ff5200;
+    border-radius: 8px;
+    overflow: hidden;
+    /*impede o texto de sair da caixa.*/
+    background: #111110;
+    transition: transform 0.3s;
+}
+
+.imagens1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.imagens1 .texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    /* dá espaço interno */
+    box-sizing: border-box;
+    color: #ff5200;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.4;
+    background: rgba(0, 0, 0, 0.7);
+    /* fundo semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* efeito ao passar o mouse */
+.imagens1:hover img {
+    opacity: 0;
+    /* imagem some */
+}
+
+.imagens1:hover .texto {
+    opacity: 1;
+    /* texto aparece */
+}
+
+.imagens1:hover {
+    transform: scale(1.05);
+    /* leve aumento ao passar o mouse */
+}
+
+.imagens1-fundoPreto {
+    position: relative;
+    width: 280px;
+    height: 220px;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    /*impede o texto de sair da caixa.*/
+    background: #111110;
+    transition: transform 0.3s;
+}
+
+.imagens1-fundoPreto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.imagens1-fundoPreto .texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    /* dá espaço interno */
+    box-sizing: border-box;
+    color: #ff5200;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.4;
+    background: rgba(0, 0, 0, 0.7);
+    /* fundo semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+
+/* efeito ao passar o mouse */
+.imagens1-fundoPreto:hover img {
+    opacity: 0;
+    /* imagem some */
+}
+
+.imagens1-fundoPreto:hover .texto {
+    opacity: 1;
+    /* texto aparece */
+}
+
+.imagens1-fundoPreto:hover {
+    transform: scale(1.05);
+    /* leve aumento ao passar o mouse */
+}
+
+/*STYLE SECAO 4 ARDUINO*/
+.arduino {
+    display: flex;
+    align-items: center;
+    /* alinha verticalmente imagem e texto */
+    justify-content: center;
+    gap: 40px;
+    /* espaço entre o texto e a imagem */
+    padding: 40px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.imagens-secao4 {
+    width: 4000px;
+    border: 3px solid #e26511;
+    border-radius: 8px;
+}
+
+.imagens-secao4 img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.arduino h2 {
+    font-size: 7em;
+    line-height: 120px;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    margin-bottom: 80px;
+    margin-top: 5rem;
+    color: #fc6424;
+    font-family: Anton;
+    letter-spacing: 5px;
+}
+
+
+.arduino p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+pre {
+    background: #111;
+    color: #ff5200;
+    padding: 15px;
+    text-align: left;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 1rem;
+}
+
+.funcionamento_arduino {
+    background-image: url("./img/fundo.png");
+    /* tua imagem de fundo */
+    background-size: cover;
+    /* cobre toda a área */
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* evita repetição */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    /* pra manter camadas */
+    display: flex;
+    align-items: center;
+    /* alinha verticalmente imagem e texto */
+    justify-content: center;
+    gap: 40px;
+    /* espaço entre o texto e a imagem */
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.funcionamento_arduino h2 {
+    font-size: 8em;
+    line-height: 125px;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    margin-bottom: 80px;
+    margin-top: 5rem;
+    color: #000000;
+    font-family: Anton;
+    letter-spacing: 2px;
+}
+
+.funcionamento_arduino p {
+    font-size: 1.2rem;
+    color: #111110;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.imagens-secao5 {
+    position: relative;
+    width: 1900px;
+    height: auto;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    /*impede o texto de sair da caixa.*/
+    background: #111110;
+    transition: transform 0.3s;
+}
+
+.imagens-secao5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.imagens-secao5 .texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* dá espaço interno */
+    box-sizing: border-box;
+    color: #ff5200;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1;
+    background: rgba(0, 0, 0, 0.7);
+    /* fundo semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+/* efeito ao passar o mouse */
+.imagens-secao5:hover img {
+    opacity: 0;
+    /* imagem some */
+}
+
+.imagens-secao5:hover .texto {
+    opacity: 1;
+    /* texto aparece */
+}
+
+.imagens-secao5:hover {
+    transform: scale(1.05);
+    /* leve aumento ao passar o mouse */
+}
+
+.linguagem_arduino {
+    padding: 60px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.linguagem_arduino h2 {
+    font-size: 6.5em;
+    line-height: 1em;
+    margin: 0;
+    color: #ffffff;
+    font-family: Anton;
+    letter-spacing: 5px;
+    text-align: left;
+    max-width: 50%;
+}
+
+.img_linguagem {
+    width: 80rem;
+    height: auto;
+}
+
+.linguagem_arduino p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.4;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 40%;
+    margin-left: 30px;
+    /* controla a distância entre o título e o texto */
+}
+
+.entradasSaidas_arduino {
+    padding: 60px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.entradasSaidas_arduino h2 {
+    font-size: 6.5em;
+    line-height: 1em;
+    margin: 0;
+    color: #ffffff;
+    font-family: Anton;
+    letter-spacing: 5px;
+    text-align: left;
+    max-width: 50%;
+}
+
+.entradasSaidas_arduino p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.4;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 40%;
+    margin-left: 30px;
+    /* controla a distância entre o título e o texto */
+}
+
+.IMGentrada_saida_arduino {
+    width: 700px;
+    margin-bottom: 80px;
+}
+
+.scripts {
+    background-image: url("./img/fundo.png");
+    /* tua imagem de fundo */
+    background-size: cover;
+    /* cobre toda a área */
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* evita repetição */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    /* pra manter camadas */
+    align-items: center;
+    /* alinha verticalmente imagem e texto */
+    justify-content: center;
+    gap: 40px;
+    /* espaço entre o texto e a imagem */
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.scripts h2 {
+    font-size: 8em;
+    line-height: 125px;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    margin-bottom: 80px;
+    margin-top: 5rem;
+    color: #000000;
+    font-family: Anton;
+    letter-spacing: 2px;
+}
+
+.scripts p {
+    font-size: 1.2rem;
+    color: #111110;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.CONVERCOES {
+    font-size: 2em;
+    color: #000000;
+    border-radius: 10px;
+    padding: 10px 5px;
+    background-color: #1f1e1e00;
+    margin-bottom: 7rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*quando passa o botao do mouse*/
+.CONVERCOES:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 10px rgba(48, 47, 47, 0.3);
+    /*sombra em baixo do botão krl*/
+}
+
+.imagens11 {
+    display: flex;
+    height: 300px;
+    border: 8px #000000;
+    margin-bottom: 90px;
+}
+
+.imagens11 .texto {
+    font-size: 1rem;
+    margin-left: 60px;
+    align-items: center;
+    text-align: left;
+    padding-right: 100px;
+    padding-top: 100px;
+
+}
+
+.imagens11 .texto1 {
+    font-size: 1rem;
+    text-align: right;
+    margin-right: 60px;
+    align-items: center;
+    padding-left: 100px;
+    padding-top: 60px;
+}
+
+.sensores em {
+    color: #aa0303;
+}
+
+
+
+footer {
+    padding: 20px;
+    border-top: 2px solid #fc6424;
+    font-size: 1rem;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}

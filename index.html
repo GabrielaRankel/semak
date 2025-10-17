@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitação de Aprendizagem</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=League+Spartan:wght@400;600&family=Oswald:wght@300;400;600&family=Archivo+Black&display=swap"
+        rel="stylesheet">
+    <style>
+        /*      ANIMAÇÃO     */
+        /* .animate-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .animate-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    } */
+    </style>
+</head>
+
+<body>
+    <!-- ANIMAÇÃOOOOOO -->
+    <!-- <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const allElements = document.querySelectorAll('body *');
+
+    allElements.forEach(el => el.classList.add('animate-up'));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    allElements.forEach(el => observer.observe(el));
+  });
+</script> -->
+
+    <!-- Cabeçalho principal com o nome do site -->
+    <header>
+        <!-- <img src="./img/logo_empresa.png" alt="" id="imagem-logo"> -->
+        <div class="botoes">
+            <a href="./index.html"><button>HOME</button></a>
+            <a href="./sobre_marca.html"><button>SEMAK</button></a>
+            <a href="https://www.whatsapp.com/?lang=pt" target="_blank">
+                <div class="redes">
+                    <img src="./img/whatts.png" alt="WhatsApp" class="botao-imagem">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="./img/insta.png" alt="WhatsApp" class="botao-imagem">
+            </a>
+        </div>
+        </div>
+    </header>
+
+    <!-- Seção herói: introdução impactante com título e subtítulo -->
+    <section class="secao-heroi">
+        <h1>VENHA FAZER O <samp>CURSO</samp> DE DESENVOLVIMENTO DE <samp>SISTEMAS</samp> COM A GENTE</h1>
+        <a href="./sobre_marca.html"><button class="botao_marca"> --- TUDO A UM CLICK DE DISTÂNCIA ---- </button></a>
+
+    </section>
+
+    <!-- Seção de ideia: texto explicativo sobre o conceito inicial -->
+    <section class="secao-ideia">
+        <h2>GANHE DINHEIRO PARA <span>CRIAR</span></h2>
+        <p>TALVEZ VOCÊ QUEIRA CRIAR SEU PRÓPRIO APLICATIVO, AUTOMATIZAR PROCESSOS, DESENVOLVER JOGOS, OU TRANSFORMAR SUA
+            PAIXÃO
+            POR TECNOLOGIA EM UMA CARREIRA DE SUCESSO. SEJA QUAL FOR O SEU OBJETIVO, DOMINAR DESENVOLVIMENTO DE SISTEMAS
+            É O
+            CAMINHO PARA TRANSFORMAR ESSAS IDEIAS EM REALIDADE.
+            NÃO É APENAS SOBRE APRENDER, É SOBRE CRIAR, TRANSFORMAR E SE DESTACAR. SE VOCÊ QUER FAZER PARTE DA PRÓXIMA
+            GERAÇÃO
+            DE DESENVOLVEDORES E PROFISSIONAIS DE TECNOLOGIA, ESTE CURSO É O SEU PONTO DE PARTIDA.</p>
+        <a target="_blank">
+            <img src="./img/ideia1.jpg" alt="" class="img_ideia">
+            <img src="./img/ideia2.jpg" alt="" class="img_ideia">
+            <img src="./img/ideia3.jpg" alt="" class="img_ideia">
+        </a>
+    </section>
+
+    <!-- Seção do professor: apresentação do instrutor -->
+    <section class="secao-professor">
+        <h2>CONHEÇA SUA <br> <span>PROFESSORA</span></h2>
+        <img src="./img/professora1.jpeg" alt="" class="img_professora">
+        <!-- <img src="./img/fundo.png" alt="" class="img_fundo"> -->
+        <p>"OLÁ! MEU NOME É GABRIELA E EU SOU PROFESSORA NA SEMAK HÁ 2 ANOS.
+            DURANTE ESSE TEMPO, PUDE VER DE PERTO O QUANTO A EXPERIÊNCIA AQUI É DIFERENTE. A SEMAK NÃO É SÓ UM LUGAR PRA
+            APRENDER — É UM AMBIENTE ONDE A GENTE COLOCA A MÃO NA MASSA, TROCA IDEIAS, ERRA, ACERTA E CRESCE JUNTO.
+            MEUS ALUNOS SE ENVOLVEM DE VERDADE, PARTICIPAM, E SAEM DAQUI PRONTOS PRA APLICAR O QUE APRENDERAM NO DIA A
+            DIA. TUDO É PENSADO PRA VOCÊ."<br> - VENHA CONOSCO NESSA! - </p>
+    </section>
+
+    <!-- Primeira seção de curso: detalhes do curso principal -->
+
+    <section class="secao-conteudo">
+        <h2>VEJA OS <span>CONTEÚDOS</span> QUE VOCÊ VAI <span>ESTUDAR</span></h2>
+
+        <div class="container-cursos">
+
+            <a href="fundamentos_eletroeletronica.html" class="caixa-conteudo">
+                <h3>Eletroeletrônica</h3>
+                <p>Aprenda os princípios de circuitos elétricos, sensores e automação, aplicando conceitos fundamentais
+                    da engenharia elétrica.</p>
+            </a>
+
+            <a href="fundamentos_banco_dados.html" class="caixa-conteudo">
+                <h3>Banco de Dados</h3>
+                <p>Descubra como armazenar, organizar e proteger informações com bancos de dados relacionais e SQL.</p>
+            </a>
+
+            <a href="logica_computacional.html" class="caixa-conteudo">
+                <h3>Lógica Computacional</h3>
+                <p>Desenvolva o raciocínio lógico e compreenda os fundamentos que estruturam o pensamento computacional.
+                </p>
+            </a>
+
+            <a href="logica_programação.html" class="caixa-conteudo">
+                <h3>Lógica de Programação</h3>
+                <p>Entenda como criar algoritmos e resolver problemas usando linguagens de programação.</p>
+            </a>
+
+            <a href="fundamentos_tecnologia_informação.html" class="caixa-conteudo">
+                <h3>Tecnologia da Informação</h3>
+                <p>Explore o mundo da TI, desde redes e segurança até as tendências mais modernas em computação.</p>
+            </a>
+        </div>
+        <br><br>
+        <a href="./sobre_marca.html"><button class="botao_marca"> --- TUDO A UM CLICK DE DISTÂNCIA ---- </button></a>
+    </section>
+
+    <!-- Seção de depoimento: citação de aluno -->
+    <section class="secao-depoimento">
+        <p>“APRENDER COM A SEMAK FEZ TODA A DIFERENÇA: DESENVOLVI HABILIDADES QUE ME ABRIRAM NOVAS OPORTUNIDADES E
+            ACELERARAM MEU CRESCIMENTO PROFISSIONAL EM 40% EM APENAS 3 MESES.”</p>
+    </section>
+
+    <!-- Seção de preços: opções de planos -->
+    <section class="secao-precos">
+        <h2>ESCOLHA UM PLANO</h2>
+        <div class="plano">
+            <h3>xxxxxxxxx</h3>
+            <div class="preco">R$ 1.900,00</div>
+            <p>Tenha acesso imediato ao curso Seja um Especialista em Conteúdo, que inclui uma variedade de aulas,
+                workshops e conteúdo exclusivo. Novos itens são adicionados todo mês.</p>
+        </div>
+        <div class="plano">
+            <h3>xxxxxxxxx</h3>
+            <div class="preco">R$ 2.400,00</div>
+            <p>Tenha acesso imediato ao curso completo de Seja um Especialista em Conteúdo, além de coaching
+                personalizado. Novos itens são adicionados todo mês.</p>
+        </div>
+    </section>
+
+    <!-- Seção de chamada para ação: convite -->
+    <section class="secao-chamada-acao">
+        <h2>DÚVIDAS? <br>Vamos conversar.</h2>
+        <p>Entre em contato conosco para mais informações. <br><span>
+                gmr2009br@gmail.com <br>
+                +55 (42) 98421-9818</span>
+        </p>
+    </section>
+
+    <!-- Rodapé: informações -->
+    <footer>
+        <p>&copy; 2025 - GABRIELA MEZZADRI RANKEL.</p>
+    </footer>
+</body>
+
+</html>
