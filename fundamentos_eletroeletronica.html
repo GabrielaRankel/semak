@@ -28,7 +28,7 @@
       </div>
     </div>
     <main>
-      <h1>FUNDAMENTOS<em> DE ELETROELETRÔNICA</em></h1>
+      <h1>FUNDAMENTOS<em> <b>DE</b> <strong>ELETROELETRÔNICA</strong></em></h1>
   </section>
 
   <!-- SEÇÃO 2 -->
@@ -179,7 +179,7 @@
   </section>
   <img src="./img/arduino_entradas_saidas.png" alt="" class="IMGentrada_saida_arduino">
   <!-- SEÇÃO 8 -->
-  <section class="entradasSaidas_arduino">
+  <section class="entradasSaidas_arduino1">
     <h2>7. Entradas e Saídas ANALÓGICAS no Arduíno</h2>
     <p>As entradas e saídas analógicas no Arduino permitem trabalhar com sinais contínuos, ou seja, valores que podem
       variar dentro de um intervalo específico, ao contrário das digitais, que têm apenas dois estados. As entradas
@@ -246,9 +246,25 @@
         transform: translate(-50%, -50%);
         text-align: center;
       }
-    </style>
-    </head>
+      @media (max-width: 1370px){
+        .image {
+        display: block;
+        width: 300px;
+        height: auto;
+      }
+    }
+      @media (max-width: 450px) {
 
+  .container {
+    width: 80%;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}
+      
+    </style>
     <body>
 
 
@@ -302,11 +318,11 @@
           Catodo comum (Common Cathode - CC): <br>
           Todos os catodos estão conectados juntos.
           Para acender um segmento, aplica-se HIGH (5V) no segmento.</strong></p>
-      <img src="./img/diodo_7_segmentos.jpeg" alt="LEDs">
+      <img src="./img/diodo_7_segmentos.jpeg" alt="LEDs" >
     </div>
 
     <div class="imagens11">
-      <img src="./img/display7segmentos.jpg" alt="Arduino">
+      <img src="./img/display7segmentos.jpg" alt="Arduino" class="img_cll_dfeito">
       <p class="texto"><strong> Funcionamento: <br>
           Cada segmento é controlado individualmente.
           Combinando quais segmentos acendem, é possível mostrar números de 0 a 9 e algumas letras (como A, b, C, d, E,
