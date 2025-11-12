@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./corvercoes.js" value></script>
+  <link rel="stylesheet" href="./style_convercoes.css">
+  <title>Calculadora Elétrica</title>
+</head>
+
+<body>
+  <header>
+    <div class="botoes">
+      <a href="./index.html"><button>HOME</button></a>
+      <a href="./sobre_marca.html"><button>Sobre a marca</button></a>
+      <a href="./fundamentos_eletroeletronica.html"><button>VOLTAR</button></a>
+      <a href="https://www.whatsapp.com/?lang=pt" target="_blank">
+        <div class="redes">
+          <img src="./img/whatts.png" alt="WhatsApp" class="botao-imagem">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <img src="./img/insta.png" alt="WhatsApp" class="botao-imagem">
+      </a>
+    </div>
+    </div>
+  </header>
+  <h2>Calculadora Elétrica</h2>
+
+  <select id="operacao" onchange="atualizarPlaceholders()">
+    <option value="">Selecione a operação</option>
+    <option value="potencia">Potência (P = V × I)</option>
+    <option value="tensao">Tensão (V = P ÷ I)</option>
+    <option value="corrente">Corrente (I = P ÷ V)</option>
+    <option value="resistencia">Resistência (R = V ÷ I)</option>
+    <option value="paralelo">Resistores em Paralelo</option>
+    <option value="serie">Resistores em Série</option>
+  </select>
+
+  <div id="inputs">
+    <input type="number" id="valor1" placeholder="Valor 1">
+    <input type="number" id="valor2" placeholder="Valor 2">
+  </div>
+
+  <button onclick="calcular()">Calcular</button>
+
+  <div class="resultado" id="resultado"></div>
+</body>
+
+</html>

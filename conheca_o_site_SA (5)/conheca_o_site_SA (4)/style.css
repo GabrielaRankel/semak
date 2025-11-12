@@ -1,0 +1,925 @@
+/* Estilo geral do corpo da página: fonte, margens, cor de fundo e espaçamento de linhas */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho: fundo branco, padding, centralizado e sombra para profundidade */
+header {
+    background-color: #111110;
+    padding: 20px;
+    /* position: fixed; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: auto;
+}
+
+.botoes {
+    display: flex;
+    gap: 8px;
+    /* Espaço entre os botões */
+    margin-top: 5px;
+}
+a, button {
+  outline: none;
+  border: none;
+}
+
+a:focus, button:focus {
+  outline: none;
+}
+
+.botoes button {
+    background-color: #111110;
+    /* Fundo */
+    color: #fc6424;
+    /* Cor do texto */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 2px solid #111110;
+    border-radius: 20px;
+    /* Tamanho interno */
+    padding: 10px 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Animação suave */
+}
+
+/* Efeito ao passar o mouse */
+.botoes button:hover {
+    background-color: #eba75a;
+    color: #000000;
+    border-color: #111110;
+}
+
+.botao-imagem {
+    width: 45px;
+    /* tamanho da imagem */
+    height: 45px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo da seção herói: */
+.secao-heroi {
+    background-color: #111110;
+    padding: 60px 20px;
+    text-align: center;
+    /*A MERDA DA BORDA QUE VOCÊ PASSOU MEIA HORA FAZENDO*/
+}
+
+.secao-heroi h1 {
+    font-size: 12em;
+    font-family: Anton;
+    /*A PORCARIA DA FONTE QUE VOCÊ PSSOU MEIA HORA PROCURANDO*/
+    color: #fc6424;
+    line-height: 12rem;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    margin-bottom: 7rem;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.secao-heroi h1 samp {
+    font-size: 1em;
+    font-style: italic;
+    /* Deixa todo o texto dentro das tags <p> em itálico */
+    font-family: Anton;
+    /*A PORCARIA DA FONTE QUE VOCÊ PSSOU MEIA HORA PROCURANDO*/
+    color: #fc6424;
+    line-height: 1px;
+    letter-spacing: 4px;
+}
+
+.botao_marca {
+    font-size: 2em;
+    color: #ff5811;
+    border-radius: 10px;
+    padding: 10px 5px;
+    background-color: #1f1e1e;
+    margin-bottom: 7rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*quando passa o botao do mouse*/
+.botao_marca:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(168, 0, 0, 0.3);
+    /*sombra em baixo do botão krl*/
+}
+/* Linha rotativa */
+
+  .marquee {
+    background-color: #111110;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 10px 0;
+    border-top: 2px solid #fc6424;
+    border-bottom: 2px solid #fc6424;
+  }
+
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 10s linear infinite;
+    font-size: 24px;
+    color: #fc6424;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .marquee span {
+      font-size: 18px;
+      animation: scroll 14s linear infinite;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .marquee span {
+      font-size: 14px;
+      animation: scroll 18s linear infinite;
+    }
+  }
+
+/* Estilo da seção de ideia: fundo branco, padding, centralizado e borda inferior para separação */
+.secao-ideia {
+    background-color: #111110;
+    /* margin: 50px; */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.secao-ideia h2 {
+    font-size: 10em;
+    line-height: 1em;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    margin-bottom: 80px;
+    margin-top: 7rem;
+    color: #e75b1f;
+    font-family: Anton;
+    margin-left: 80px;
+    letter-spacing: 5px;
+}
+
+.secao-ideia h2 span {
+    font-size: 1em;
+    line-height: 135px;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    font-style: italic;
+    margin-top: 7rem;
+    color: #fc6424;
+    font-family: Anton;
+    margin-left: 70px;
+    letter-spacing: 5px;
+    z-index: 1;
+}
+
+.secao-ideia p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.2em;
+    color: #fc6424;
+    margin-right: 80px;
+    text-align: left;
+    margin-bottom: 10rem;
+    margin-top: 5rem;
+}
+
+.img_ideia {
+    width: 500px;
+    height: 730px;
+}
+
+/* Estilo da seção do professor: */
+.secao-professor {
+    background-image: url("./img/fundo.png");
+    /* tua imagem de fundo */
+    background-size: cover;
+    /* cobre toda a área */
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* evita repetição */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    /* pra manter camadas */
+}
+
+/* Estilo do título h2 na seção do professor: tamanho médio e margem inferior */
+.secao-professor h2 {
+    font-size: 11em;
+    line-height: 163px;
+    margin-top: 7rem;
+    /* muda o espaço de cuima dela com a seção */
+    margin-bottom: 0;
+    /* tira o espaço inferior par img ficar em cima  */
+    color: #111110;
+    font-family: Anton;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.secao-professor h2 span {
+    font-size: 1em;
+    line-height: 135px;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    font-style: italic;
+    margin-top: 7rem;
+    color: #111110;
+    font-family: Anton;
+    margin-left: 70px;
+    letter-spacing: 5px;
+    z-index: 1;
+
+}
+
+.secao-professor p {
+    font-size: 1em;
+    line-height: 20px;
+    margin-top: 7rem;
+    /* muda o espaço de cuima dela com a seção */
+    margin-bottom: 0;
+    /* tira o espaço inferior par img ficar em cima  */
+    color: #111110;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    word-spacing: 8px;
+}
+
+.img_professora {
+    width: 35rem;
+    height: auto;
+    margin-top: -2rem;
+    /* valor negativo faz ela subir */
+    z-index: 2;
+    padding-bottom: 11px;
+}
+
+/* Estilo do parágrafo na seção do professor: largura máxima para centralização */
+.secao-professor p {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+
+
+/* Estilo da seção de curso: */
+.secao-conteudo {
+    padding: 60px 20px;
+    text-align: center;
+    align-items: center;
+    background-color: #111110;
+}
+
+.secao-conteudo h2 {
+    font-size: 9em;
+    line-height: 135px;
+    margin-top: 7rem;
+    /* muda o espaço de cima dela com a seção */
+    margin-bottom: 5rem;
+    /* tira o espaço inferior par img ficar em cima  */
+    color: #e45b21;
+    font-family: Anton;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.secao-conteudo h2 span {
+    font-size: 1em;
+    line-height: 140px;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    font-style: italic;
+    margin-top: 7rem;
+    color: #fc6424;
+    font-family: Anton;
+    letter-spacing: 5px;
+    z-index: 1;
+}
+
+.container-cursos {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+
+  width: 90%;
+  max-width: 1100px;  /* mantém centralizado e evita encostar nas bordas */
+  margin: 0 auto;     /* centraliza na página */
+  padding: 0 40px;    /* espaçamento lateral */
+  gap: 30px;          /* espaço entre os cards */
+
+
+}
+
+.caixa-conteudo {
+    flex: 1 1 250px;     /* permite que os cards quebrem e se ajustem */
+  max-width: 300px;    /* largura máxima por card */
+  min-width: 250px;    /* largura mínima para responsividade */
+  background-color: #fff;
+  color: #111;
+  text-decoration: none;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.caixa-conteudo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.caixa-conteudo h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #fc7434;
+    font-family: Anton, sans-serif;
+}
+
+.caixa-conteudo p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Estilo da seção de depoimento:  */
+.secao-depoimento {
+    background-image: url("./img/fundo.png");
+    /* tua imagem de fundo */
+    background-size: cover;
+    /* cobre toda a área */
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* evita repetição */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    /* pra manter camadas */
+}
+
+.secao-depoimento p {
+    font-size: 5em;
+    line-height: 80px;
+    margin-top: 7rem;
+    /* muda o espaço de cuima dela com a seção */
+    margin-bottom: 7rem;
+    /* tira o espaço inferior par img ficar em cima  */
+    color: #111110;
+    font-family: Anton;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Estilo da seção de preços: */
+.secao-precos {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #111110;
+}
+
+.secao-precos h2 {
+    font-size: 10em;
+    line-height: 150px;
+    margin-top: 5rem;
+    /* muda o espaço de cima dela com a seção */
+    color: #fc6424;
+    font-family: Anton;
+    text-align: center;
+    letter-spacing: 5px;
+    margin-bottom: 8rem;
+}
+
+
+.plano {
+    display: inline-block;
+    background-color: #2b2b28;
+    border: 2px solid #fc6424;
+    border-radius: 8px;
+    padding: 40px;
+    margin: 30px;
+    width: 350px;
+    height: 500px;
+    vertical-align: top;
+    margin-bottom: 8rem;
+
+
+}
+
+.plano h3 {
+    font-size: 4.5em;
+    margin: 20px;
+    color: #fc6424;
+}
+
+.plano p {
+    font-size: 20px;
+    color: #e45b21;
+    margin-top: 7px;
+    align-items: center;
+    text-align: center;
+}
+
+.plano .preco {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fc6424;
+}
+
+.preco {
+    margin-bottom: 10px;
+}
+
+
+/* Estilo da seção de chamada para ação (CTA):  */
+.secao-chamada-acao {
+    background-image: url("./img/fundo.png");
+    /* tua imagem de fundo */
+    background-size: cover;
+    /* cobre toda a área */
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* evita repetição */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    /* pra manter camadas */
+}
+
+.secao-chamada-acao p {
+    font-size: 3em;
+    line-height: 80px;
+    margin-top: 7rem;
+    /* muda o espaço de cuima dela com a seção */
+    margin-bottom: 7rem;
+    /* tira o espaço inferior par img ficar em cima  */
+    color: #111110;
+    font-family: Anton;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.secao-chamada-acao h2 {
+    font-size: 8.5em;
+    line-height: 130px;
+    margin-top: 8rem;
+    /* muda o espaço de cuima dela com a seção */
+    margin-bottom: 7rem;
+    /* tira o espaço inferior par img ficar em cima  */
+    color: #111110;
+    font-family: Anton;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.secao-chamada-acao p span {
+    font-size: 1em;
+    line-height: 70px;
+    margin-top: 5rem;
+    /* muda o espaço de cuima dela com a seção */
+    margin-bottom: 7rem;
+    /* tira o espaço inferior par img ficar em cima  */
+    color: #111110;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+/* Estilo do rodapé: fundo escuro, cor branca, padding e texto centralizado */
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 2px;
+    text-align: center;
+}
+
+/* =========================================== */
+/* media querie */
+/* =========================================== */
+
+/* Reset global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita scroll horizontal */
+  width: 100vw; /* Limita largura do body a vista */
+}
+
+/* Garantindo containers responsivos */
+.container-cursos, 
+.secao-heroi, 
+.secao-ideia, 
+.secao-professor, 
+.secao-conteudo,
+.secao-depoimento,
+.secao-precos,
+.secao-chamada-acao,
+.plano {
+  max-width: 100vw;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* 1 - até 480px */
+@media (max-width: 480px) {
+  .secao-heroi h1,
+  .secao-ideia h2,
+  .secao-professor h2,
+  .secao-heroi p,
+  .secao-ideia p,
+  .secao-ideia span {
+    word-wrap: break-word;
+  }
+.secao-ideia p{
+padding-bottom: 80px;
+}
+  .secao-heroi h1 { font-size: 4.5em; line-height: 1.1em; margin: 0 25px 50px; }
+  .secao-ideia h2 { font-size: 4.5em; line-height: 1.1em; }
+  .secao-professor h2 { font-size: 5.5em; line-height: 1.1em; }
+  .plano { width: 320px; height: 420px; }
+}
+
+/* 2 - até 576px */
+@media (max-width: 576px) {
+  .secao-heroi h1,
+  .secao-ideia h2,
+  .secao-professor h2,
+  .secao-heroi p,
+  .secao-ideia p,
+  .secao-ideia span {
+    word-wrap: break-word;
+  }
+
+  .secao-heroi h1 { font-size: 5em; line-height: 1.15em; }
+  .secao-ideia h2 { font-size: 5em; line-height: 1.15em; }
+  .secao-professor h2 { font-size: 6em; line-height: 1.1em; }
+  .plano { width: 340px; height: 440px; }
+}
+
+/* 3 - até 640px */
+@media (max-width: 640px) {
+  .secao-heroi h1,
+  .secao-ideia h2,
+  .secao-professor h2,
+  .secao-heroi p,
+  .secao-ideia p,
+  .secao-ideia span {
+    word-wrap: break-word;
+  }
+
+  .secao-heroi h1 { font-size: 5.5em; line-height: 1.1em; }
+  .secao-ideia h2 { font-size: 5.5em; line-height: 1.1em; }
+  .secao-conteudo .caixa-conteudo { width: 260px; }
+}
+
+/* 4 - até 768px */
+@media (max-width: 768px) {
+  .secao-heroi h1,
+  .secao-ideia h2,
+  .secao-professor h2,
+  .secao-heroi p,
+  .secao-ideia p,
+  .secao-ideia span {
+    word-wrap: break-word;
+  }
+
+  .secao-heroi h1 { font-size: 6em; line-height: 1.1em; }
+  .secao-ideia p { font-size: 1.2em; margin: 0 40px; line-height: 1.5em; }
+  .plano { width: 360px; height: 460px; }
+}
+
+/* 5 - até 900px */
+@media (max-width: 900px) {
+  .secao-heroi h1,
+  .secao-ideia h2,
+  .secao-professor h2,
+  .secao-heroi p,
+  .secao-ideia p,
+  .secao-ideia span {
+    word-wrap: break-word;
+  }
+
+  .secao-heroi h1 { font-size: 6.5em; line-height: 1.1em; }
+  .secao-ideia h2 { font-size: 6em; line-height: 1.1em; }
+  .secao-professor .img_professora { width: 300px; }
+}
+
+/* 6 - até 1024px */
+@media (max-width: 1024px) {
+  .secao-heroi h1,
+  .secao-ideia h2,
+  .secao-professor h2,
+  .secao-heroi p,
+  .secao-ideia p,
+  .secao-ideia span {
+    word-wrap: break-word;
+  }
+
+  .secao-heroi h1 { font-size: 7em; line-height: 1.1em; }
+  .secao-ideia h2 { font-size: 6.5em; line-height: 1.1em; }
+  .caixa-conteudo { width: 280px; }
+  .plano { width: 380px; height: 480px; }
+}
+
+/* 7 - até 1200px */
+@media (max-width: 1200px) {
+  .secao-heroi h1,
+  .secao-ideia h2,
+  .secao-professor h2,
+  .secao-heroi p,
+  .secao-ideia p,
+  .secao-ideia span {
+    word-wrap: break-word;
+  }
+
+  .secao-heroi h1 { font-size: 7.5em; line-height: 1.1em; }
+  .secao-ideia h2 { font-size: 7em; line-height: 1.1em; }
+  .plano { width: 400px; height: 500px; }
+}
+
+/* 8 - até 1440px */
+@media (max-width: 1440px) {
+  .secao-heroi h1,
+  .secao-ideia h2,
+  .secao-professor h2,
+  .secao-heroi p,
+  .secao-ideia p,
+  .secao-ideia span {
+    word-wrap: break-word;
+  }
+
+  .secao-heroi h1 { font-size: 8em; line-height: 1.1em; }
+  .secao-ideia h2 { font-size: 7.5em; line-height: 1.1em; }
+  .plano { width: 420px; height: 520px; }
+}
+
+/* 9 - até 1680px */
+@media (max-width: 1680px) {
+  .secao-heroi h1,
+  .secao-ideia h2,
+  .secao-professor h2,
+  .secao-heroi p,
+  .secao-ideia p,
+  .secao-ideia span {
+    word-wrap: break-word;
+  }
+
+  .secao-heroi h1 { font-size: 8.5em; line-height: 1.1em; }
+  .secao-ideia h2 { font-size: 8em; line-height: 1.1em; }
+  .plano { width: 440px; height: 540px; }
+}
+
+/* 10 - até 1900px */
+@media (max-width: 1900px) {
+  .secao-heroi h1,
+  .secao-ideia h2,
+  .secao-professor h2,
+  .secao-heroi p,
+  .secao-ideia p,
+  .secao-ideia span {
+    word-wrap: break-word;
+  }
+
+  .secao-heroi h1 { font-size: 9em; line-height: 1em; }
+  .secao-ideia h2 { font-size: 8.5em; line-height: 1.1em; }
+  .plano { width: 460px; height: 560px; }
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------celular------------------------------------------------------------------------------------------------------------------------------*/
+/* 6 - até 360px */
+@media (max-width: 460px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  
+  .secao-heroi h1 {
+    font-size: 4em;
+    line-height: 4rem;
+    word-wrap: break-word;
+    padding-bottom: 1px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+  }
+  .secao-heroi h1 strong{
+    color: #f88655;
+    font-size: 0.5em;
+    word-wrap: break-word;
+    padding-bottom: 1px;
+  }
+  .secao-heroi button {
+    font-size: 1em;
+    word-wrap: break-word;
+
+
+  }
+  
+  .secao-ideia h2 { font-size: 4em; margin-left: 0; line-height: 4rem; }
+  .secao-ideia h2 span{ font-size: 1.5em; margin-right: 0px; margin-left: 0px; align-items: center;}
+  .secao-ideia p{ font-size: 1em; margin-right: 70px; margin-left: 7px; align-items: center;}
+  .secao-ideia img{ width: 200px; height: auto;}
+  .secao-professor h2 { font-size: 5em; line-height: 5rem; }
+  .secao-professor h2 span{  font-size: 0.75em; line-height: 0.1rem; align-items: center; margin: 0px;    word-wrap: break-word;}
+  .secao-professor p{  font-size: 0.75em; line-height: 1rem; word-wrap: break-word;}
+  .secao-professor .img_professora{ margin-top: -0.7rem; width: 260px;}
+  
+  .secao-conteudo h2 { font-size: 4em; line-height: 4rem; }
+  .secao-conteudo h2 span{ font-size: 1em; line-height: 1rem; }
+  .secao-conteudo{ 
+    
+    .container-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    /* ALTERADO: Garante que o contêiner ocupa toda a largura */
+    max-width: 1200px;
+    /* ADICIONADO: Define uma largura máxima para o contêiner */
+    margin: 0 auto;
+    /* ADICIONADO: Centraliza o contêiner na página */
+    gap: 30px;
+
+}
+
+.caixa-conteudo {
+    background-color: #fff;
+    color: #111;
+    text-decoration: none;
+    width: 240px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.caixa-conteudo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.caixa-conteudo h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #fc7434;
+    font-family: Anton, sans-serif;
+}
+
+.caixa-conteudo p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+ button {
+    font-size: 1.3em;
+    margin-left: 30px;
+    margin-right: 30px;
+    word-wrap: break-word;
+
+
+  }
+  
+   }
+  
+
+  .secao-depoimento p { font-size: 1.7em; line-height: 2rem; }
+  
+
+  .secao-precos { align-items: center; margin-left: 0px; margin-right: 0px;}
+  .secao-precos h2 { font-size: 4em; line-height: 3.7rem; }
+  .plano { width: 300px; height: 400px; margin-top: 0px;}
+  .plano h3{ font-size: 3rem; }
+  .plano p{ font-size: 1rem;  }
+
+
+  .secao-chamada-acao h2 { font-size: 4em; line-height: 4rem; }
+  .secao-chamada-acao p { font-size: 2.5em; line-height: 2rem; }
+  .secao-chamada-acao p span{ font-size: 0.7em; line-height: 2rem; }
+  
+  .botoes {
+    font-size: 0.7em;
+    padding: 3px 5px;
+    gap: 3px;
+  }
+}
+
+
+/* media para os botoes do inicio (botão do whats e insta) */
+/* ========================= */
+/*        MEDIA QUERIES      */
+/* ========================= */
+
+/* Tablets (entre 600px e 1024px) */
+@media (max-width: 1024px) {
+  header {
+    padding: 15px;
+  }
+
+  .botoes {
+    gap: 6px;
+    justify-content: center; /* centraliza os botões */
+  }
+
+  .botoes button {
+    font-size: 18px;
+    padding: 8px 10px;
+  }
+
+  .botao-imagem {
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .botoes {
+    display: flex;
+    flex-direction: row; /* força ficar lado a lado */
+    flex-wrap: nowrap; /* não quebra linha */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto; /* rolagem lateral se faltar espaço */
+  }
+
+  .botoes a {
+    display: inline-flex; /* impede quebra nos links */
+    align-items: center;
+  }
+
+  .botoes button {
+    font-size: 16px;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+
+  .botao-imagem {
+    width: 26px;
+    height: 26px;
+    padding: 4px;
+  }
+}
+
+/* Telas muito pequenas (menores que 400px) */
+@media (max-width: 400px) {
+  .botoes {
+    display: flex;
+    flex-wrap: nowrap; /* impede quebrar linha */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto; /* rola lateralmente se precisar */
+  }
+
+  .botoes button {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+
+  .botao-imagem {
+    width: 26px;
+    height: 26px;
+    padding: 4px;
+  }
+}
