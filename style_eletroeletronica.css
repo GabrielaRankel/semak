@@ -816,7 +816,7 @@ footer {
 
 @media (max-width: 480px) {
     .botoes .icones {
-    padding-left: 50px;
+    padding-left: 40px;
 }  
  .titulo{height: 30rem; padding-left: 40px;padding-right: 30px;}
   .titulo h1 { font-size: 3.5em; line-height: 3rem; word-spacing:250px; letter-spacing:3px; margin-bottom: 45px; overflow-wrap: break-word}
