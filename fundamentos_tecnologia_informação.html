@@ -30,7 +30,46 @@
         <main>
             <h1>TECNOLOGIA<em> DA INFORMAÇÃO:</em></h1>
     </section>
-
+    <style>
+        #aviso {
+          position: fixed;
+          color: white;
+          top: 20px;        /* agora no topo */
+          right: 20px;      /* canto superior direito */
+          background: #ff5e00d8;
+          padding: 12px 18px;
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgb(68, 66, 58);
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          opacity: 0;
+          transition: opacity .4s ease;
+          pointer-events: none; /* só pra não atrapalhar nada */
+        }
+      
+        #aviso.mostrar {
+          opacity: 1;
+        }
+      </style>
+      
+      </head>
+      <body>
+      
+      <div id="aviso">Página interativa: passe o cursor pelas imagens.</div>
+      
+      <script>
+        const aviso = document.getElementById("aviso");
+        // aparece depois de 3 segundos
+        setTimeout(() => {
+          aviso.classList.add("mostrar");
+      
+          // some depois de ficar 5s visível
+          setTimeout(() => {
+            aviso.classList.remove("mostrar");
+          }, 5000);
+      
+        }, 3000);
+      </script>
     <!-- SEÇÃO 2 -->
     <section class="componentes">
         <h2>O que é o HARDWARE de computadores? O que é PLACA MÃE? PROCESSADOR? e
