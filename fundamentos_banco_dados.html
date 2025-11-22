@@ -231,30 +231,121 @@
         </div>
         <h2>Quais os TIPOS de DADOS de um BANCO de dados?</h2>
     </section>
+    <section class="arduino">
+                <div class="texto-arduino">
+
+        <h2>Modelagem de Banco de Dados: DER e MER</h2>
+        <p>O que é Modelagem de Dados? <br>
+É o processo de criar um modelo abstrato que representa a estrutura, relações e restrições dos dados de um sistema. <br>
+
+<strong>Modelo DER (Diagrama Entidade-Relacionamento) </strong><br>
+Representa graficamente as entidades (objetos do mundo real), seus atributos e os relacionamentos entre elas. <br>
+
+<strong>Modelo MER (Modelo Entidade-Relacionamento)</strong> <br>
+É a representação conceitual do DER, focando na estrutura lógica dos dados sem considerar implementação física. <br>
+        </p>
+        </div>
+        <section class="galeria">
+            <div class="imagens11">
+                <img src="./img/entidade_bd.jpg" alt="entidade">
+                <p class="texto"> Entidade  <br>
+Objeto do mundo real (ex: Cliente, Produto)</p>
+            </div>
+
+            <div class="imagens11">
+                <img src="./img/relacionamento_bd.jpg" alt="relacionamento">
+                <p class="texto">Relacionamento <br>
+Associação entre entidades (ex: Compra, Pertence)</p>
+            </div>
+
+            <div class="imagens11">
+                <img src="./img/atribuuto_bd.png" alt="Atriburo">
+                <p class="texto">Atributo <br>
+Característica da entidade (ex: Nome, Preço)</p>
+            </div>
+
+            <div class="imagens11">
+                <img src="./img/cardinaliade_bd.png" alt="Cardinalidade">
+                <p class="texto">Cardinalidade <br>
+Quantidade de relacionamentos (1:1, 1:N, N:M)
+                </p>
+            </div>
+        </section>
+
+    </section>
+    <section class="exemplos_de_modelos_de_banco_de_dados">
+
+    <div class="modelo">
+        <h2>Exemplo de Diagrama <br><em>DER</em></h2>
+
+        <div class="card">
+            <img src="./img/diagrama_der.png" alt="Atributos">
+
+            <p class="texto">
+                Entidades Principais <br>
+                Livro: ISBN, Título, Autor, Ano <br>
+                Autor: ID, Nome, Nacionalidade <br>
+                Usuário: ID, Nome, Email, Telefone <br>
+                Empréstimo: ID, Data_Empréstimo, Data_Devolução <br><br>
+
+                Relacionamentos <br>
+                Autor escreve Livro (1:N) <br>
+                Usuário realiza Empréstimo (1:N) <br>
+                Livro está em Empréstimo (1:1)
+            </p>
+        </div>
+    </div>
+
+
+    <div class="modelo">
+        <h2>Exemplo de Diagrama <br><em>MER</em></h2>
+
+        <div class="card">
+            <img src="./img/diagrama_mer.png" alt="Atributos">
+
+            <p class="texto">
+                Estrutura do MER <br><br>
+
+                CLIENTE <br>
+                ID_Cliente (PK)<br>
+                Nome<br>
+                Email<br>
+                Telefone<br><br>
+
+                PEDIDO <br>
+                ID_Pedido (PK)<br>
+                Data_Pedido<br>
+                Status<br>
+                ID_Cliente (FK)<br><br>
+
+                PRODUTO <br>
+                ID_Produto (PK)<br>
+                Nome<br>
+                Preço<br>
+                Estoque<br><br>
+
+                ITEM_PEDIDO <br>
+                ID_Pedido (FK)<br>
+                ID_Produto (FK)<br>
+                Quantidade<br>
+                Preço_Unitário
+            </p>
+        </div>
+    </div>
+
+</section>
 
     <!-- SEÇÃO 6 -->
     <section class="linguagem_arduino1">
-        <div class="linguagem_arduino">
-            <h2>VEJA ALGUNS PROGRAMAS CRIADOS PELOS NOSSOS ALUNOS NESSE MÓDULO</h2>
+    <h2>VEJA ALGUNS PROGRAMAS CRIADOS PELOS NOSSOS ALUNOS NESSE MÓDULO</h2>
+    <div class="linguagem_arduino">
+        <div class="pequena">
+        <img src="img/DER_TechEdu_gabriela.png">
+        </div>
+        <img src="img/DER_TechEdu_GABRIELA (1).png" alt="">
+    </div>
+</section>
 
-            <div class="container-botao-script">
-                <button class="botao-script" onclick="window.location.href='./scripts_programacao/ordenar.html'">Ir para
-                    Ordenar</button>
-                <button class="botao-script" onclick="window.location.href='./scripts_programacao/bubbleSort.html'">Ir
-                    para Bubble Sort</button>
-                <button class="botao-script" onclick="window.location.href='./scripts_programacao/somaArray.html'">Ir
-                    para Somar Array</button>
-                <button class="botao-script" onclick="window.location.href='./scripts_programacao/matriz.html'">Ir para
-                    Gerar Matriz</button>
-                <button class="botao-script" onclick="window.location.href='./scripts_programacao/imc.html'">Ir para
-                    IMC</button>
-                <button class="botao-script" onclick="window.location.href='./scripts_programacao/temperatura.html'">Ir
-                    para Converter Temperaturas</button>
-                <button class="botao-script" onclick="window.location.href='./scripts_programacao/buscaLinear.html'">Ir
-                    para Busca Linear</button>
-            </div>
-
-    </section>
     <footer>
         <p>© 2025 Fundamentos de Eletroeletrônica — GABRIELA RANKEL</p>
     </footer>

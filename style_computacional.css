@@ -114,36 +114,54 @@ body {
 .sensores {
     padding: 60px 10%;
     background-image: url("./img/fundo.png");
-    /* tua imagem de fundo */
     background-size: cover;
-    /* cobre toda a área */
     background-position: center;
-    /* centraliza */
     background-repeat: no-repeat;
-    /* evita repetição */
     border-bottom: 2px solid #fc6424;
 }
-
+/* Título ajustado para não quebrar o layout */
 .sensores h2 {
-    font-size: 7em;
-    line-height: 120px;
-    /*ESPAÇO ENTRE AS LINHAS*/
-    margin-bottom: 80px;
+    font-size: 5.5em;
+    line-height: 1.1;
+    margin-bottom: 40px;
     margin-top: 5rem;
     color: #111110;
     font-family: Anton;
     letter-spacing: 5px;
 }
 
+/* Caixa que organiza texto + imagem lado a lado */
+.sensores .conteudo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start; /* Alterado para manter próximos, em vez de space-between */
+    gap: 40px;
+    flex-wrap: wrap; /* Adicionado para permitir quebra em telas pequenas, se necessário */
+}
 
+/* Lado do texto */
+.sensores .texto {
+    flex: 1; /* Alterado para flex: 1 para ocupar espaço disponível, em vez de width fixa */
+    min-width: 300px; /* Adicionado para evitar que o texto fique muito estreito */
+}
+
+/* Parágrafos */
 .sensores p {
-    /* font-weight:bold; */
     font-size: 1.2rem;
     line-height: 1.5;
     color: #111110;
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Imagem do lado direito */
+.img-algoritmo {
+    flex: 0 0 35%; /* Alterado para flex-basis para controlar largura */
+    max-width: 580px;
+    height: auto;
+    display: block;
+}
+
+/* Negrito em <em> */
 .sensores em {
     font-weight: bold;
     font-size: 1.2rem;
@@ -152,6 +170,28 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .sensores .conteudo {
+        flex-direction: column; /* Em telas pequenas, imagem abaixo do texto */
+        gap: 20px;
+    }
+    .sensores .texto {
+        flex: none;
+        width: 100%;
+    }
+    .img-algoritmo {
+        flex: none;
+        width: 100%;
+        max-width: none;
+    }
+    .sensores h2 {
+        font-size: 2.5em; /* Ajuste para telas menores */
+    }
+}
+
+
+
 .galeria {
     display: flex;
     flex-wrap: wrap;
@@ -159,7 +199,64 @@ body {
     gap: 20px;
     padding: 20px;
 }
+.imagens3 {
+    position: relative;
+    width: 300px;
+    height: 260px;
+    margin-left: 80px;
+    border: 3px solid #ff5200;
+    border-radius: 8px;
+    overflow: hidden;
+    /*impede o texto de sair da caixa.*/
+    background: #111110;
+    transition: transform 0.3s;
 
+}
+
+.imagens3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.imagens3 .texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    /* dá espaço interno */
+    box-sizing: border-box;
+    color: #ff5200;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.4;
+    background: rgba(0, 0, 0, 0.7);
+    /* fundo semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* efeito ao passar o mouse */
+.imagens3:hover img {
+    opacity: 0;
+    /* imagem some */
+}
+
+.imagens3:hover .texto {
+    opacity: 1;
+    /* texto aparece */
+}
+
+.imagens3:hover {
+    transform: scale(1.05);
+    /* leve aumento ao passar o mouse */
+}
 .imagens1 {
     position: relative;
     width: 280px;
@@ -372,7 +469,7 @@ pre {
 
 .imagens-secao5 {
     position: relative;
-    width: 800px;
+    width: 1800px;
     height: auto;
     border: 3px solid #000000;
     border-radius: 8px;
@@ -477,6 +574,7 @@ pre {
     font-size: 6.5em;
     line-height: 1em;
     margin: 0;
+    padding-left:30px ;
     color: #ffffff;
     font-family: Anton;
     letter-spacing: 5px;
@@ -647,6 +745,12 @@ pre {
 .botao-script:hover {
     background-color: #e6510c;
     transform: scale(1.05);
+}
+
+.imagens_portugol{
+width: 800px;
+height: auto;
+margin: 15px 15px 15px 15px;
 }
 
 footer {

@@ -160,7 +160,17 @@ body {
     padding: 20px;
 }
 
-
+.imagens11{
+   position: relative;
+    width: 350px;
+    height: 280px;
+    border: 3px solid #ff5200;
+    border-radius: 8px;
+    overflow: hidden;
+    /*impede o texto de sair da caixa.*/
+    background: #111110;
+    transition: transform 0.3s;
+}
 .imagens1 {
     position: relative;
     width: 380px;
@@ -172,14 +182,14 @@ body {
     background: #111110;
     transition: transform 0.3s;
 }
-
+.imagens11 img,
 .imagens1 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: opacity 0.5s ease;
 }
-
+.imagens11 .texto,
 .imagens1 .texto {
     position: absolute;
     top: 0;
@@ -203,16 +213,17 @@ body {
 }
 
 /* efeito ao passar o mouse */
+.imagens11:hover img,
 .imagens1:hover img {
     opacity: 0;
     /* imagem some */
 }
-
+.imagens11:hover .texto,
 .imagens1:hover .texto {
     opacity: 1;
     /* texto aparece */
 }
-
+.imagens11:hover,
 .imagens1:hover {
     transform: scale(1.05);
     /* leve aumento ao passar o mouse */
@@ -247,7 +258,7 @@ body {
 
 
 .arduino h2 {
-    font-size: 7em;
+    font-size: 6em;
     line-height: 120px;
     /*ESPAÇO ENTRE AS LINHAS*/
     margin-bottom: 80px;
@@ -259,7 +270,7 @@ body {
 
 
 .arduino p {
-    font-size: 1.2rem;
+    font-size: 1.19rem;
     line-height: 1.5;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -374,41 +385,33 @@ pre {
     transform: scale(1.05);
     /* leve aumento ao passar o mouse */
 }
+.linguagem_arduino1 {
+    width: 100%;
+    text-align: center;
+}
+
+.linguagem_arduino1 h2 {
+    color: white;
+    font-size: 90px;
+    margin-bottom: 40px;
+    line-height: 97px;
+    padding-left: 180px;
+    padding-right: 180px;
+}
 
 .linguagem_arduino {
-    padding: 60px 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;  /* CENTRALIZA TUDO */
     align-items: center;
-    margin-bottom: 80px;
+    gap: 80px; /* ESPAÇO ENTRE AS IMAGENS */
+    padding: 150px 0; 
 }
 
-.linguagem_arduino h2 {
-    font-size: 6.5em;
-    line-height: 1em;
-    margin: 0;
-    color: #ffffff;
-    font-family: Anton;
-    letter-spacing: 5px;
-    text-align: left;
-    max-width: 50%;
+.linguagem_arduino img {
+    width: 650px; /* TAMANHO IDEAL */
+    max-width: 100%;
 }
 
-.img_linguagem {
-    width: 80rem;
-    height: auto;
-}
-
-.linguagem_arduino p {
-    font-size: 1.2rem;
-    color: #ffffff;
-    line-height: 1.4;
-    text-align: left;
-    font-family: 'Courier New', Courier, monospace;
-    max-width: 40%;
-    margin-left: 30px;
-    /* controla a distância entre o título e o texto */
-}
 
 .sensores em {
     color: #aa0303;
@@ -437,7 +440,64 @@ pre {
     background-color: #e6510c;
     transform: scale(1.05);
 }
+.exemplos_de_modelos_de_banco_de_dados {
+    background-image: url("./img/fundo.png");
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    color: #111;
+    flex-wrap: nowrap; /* impede quebrar para baixo */
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+.exemplos_de_modelos_de_banco_de_dados h2{
+        font-size: 4rem;
+}
+.exemplos_de_modelos_de_banco_de_dados h2 em{
+        font-size: 5rem;
+}
+.exemplos_de_modelos_de_banco_de_dados p{
+       font-size: 1rem;
 
+}
+
+.modelo {
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    width: 500px; /* tamanho grande */
+    height: 400px; /* tamanho grande */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.4s ease;
+    margin-bottom: 100px;
+}
+
+.card .texto {
+    position: absolute;
+    inset: 0;
+    padding: 20px;
+    background: white;
+    opacity: 0;
+    overflow-y: auto;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover img {
+    opacity: 0;
+}
+
+.card:hover .texto {
+    opacity: 1;
+}
 footer {
     padding: 20px;
     border-top: 2px solid #fc6424;
