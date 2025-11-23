@@ -787,7 +787,7 @@ padding-bottom: 80px;
   .secao-professor h2 { font-size: 5em; line-height: 5rem; }
   .secao-professor h2 span{  font-size: 0.75em; line-height: 0.1rem; align-items: center; margin: 0px;    word-wrap: break-word;}
   .secao-professor p{  font-size: 0.75em; line-height: 1rem; word-wrap: break-word;}
-  .secao-professor .carrossel_professora{ margin-top: -0.7rem; width: 260px;}
+  .secao-professor .carrossel_professora{ margin-top: -0.7rem; width: 260px; height: 360px;}
   
   .secao-conteudo h2 { font-size: 4em; line-height: 4rem; }
   .secao-conteudo h2 span{ font-size: 1em; line-height: 1rem; }
