@@ -61,7 +61,7 @@ body {
 .titulo {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
     width: auto;
-    background-image: url("./img/fundo_programacao.png");
+    background-image: url("./img/fundo_redes.png");
     /* tua imagem de fundo */
     background-size: cover;
     /* cobre toda a área */
@@ -162,8 +162,8 @@ body {
 
 .imagens1 {
     position: relative;
-    width: 380px;
-    height: 280px;
+    width: 280px;
+    height: 220px;
     border: 3px solid #ff5200;
     border-radius: 8px;
     overflow: hidden;
@@ -217,6 +217,64 @@ body {
     /* leve aumento ao passar o mouse */
 }
 
+.imagens1-fundoPreto {
+    position: relative;
+    width: 280px;
+    height: 220px;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    /*impede o texto de sair da caixa.*/
+    background: #111110;
+    transition: transform 0.3s;
+}
+
+.imagens1-fundoPreto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.imagens1-fundoPreto .texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    /* dá espaço interno */
+    box-sizing: border-box;
+    color: #ff5200;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.4;
+    background: rgba(0, 0, 0, 0.7);
+    /* fundo semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+
+/* efeito ao passar o mouse */
+.imagens1-fundoPreto:hover img {
+    opacity: 0;
+    /* imagem some */
+}
+
+.imagens1-fundoPreto:hover .texto {
+    opacity: 1;
+    /* texto aparece */
+}
+
+.imagens1-fundoPreto:hover {
+    transform: scale(1.05);
+    /* leve aumento ao passar o mouse */
+}
 
 /*STYLE SECAO 4 ARDUINO*/
 .arduino {
@@ -232,8 +290,7 @@ body {
 }
 
 .imagens-secao4 {
-    width: 3000px;
-    height: auto;
+    width: 4000px;
     border: 3px solid #e26511;
     border-radius: 8px;
 }
@@ -289,25 +346,15 @@ pre {
     align-items: center;
     /* alinha verticalmente imagem e texto */
     justify-content: center;
-    gap: 300px;
+    gap: 40px;
     /* espaço entre o texto e a imagem */
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .funcionamento_arduino h2 {
-    font-size: 11em;
-    line-height: 170px;
-    /*ESPAÇO ENTRE AS LINHAS*/
-    margin-bottom: 80px;
-    margin-top: 5rem;
-    color: #000000;
-    font-family: Anton;
-    letter-spacing: 2px;
-    padding-right: 300px;
-}
-
-.funcionamento_arduino strong {
-    font-size: 2em;
-    line-height: 350px;
+    font-size: 8em;
+    line-height: 125px;
     /*ESPAÇO ENTRE AS LINHAS*/
     margin-bottom: 80px;
     margin-top: 5rem;
@@ -324,9 +371,8 @@ pre {
 }
 
 .imagens-secao5 {
-    margin-left: 100px;
     position: relative;
-    width: 700px;
+    width: 1900px;
     height: auto;
     border: 3px solid #000000;
     border-radius: 8px;
@@ -419,33 +465,158 @@ pre {
     /* controla a distância entre o título e o texto */
 }
 
+.entradasSaidas_arduino {
+    padding: 60px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.entradasSaidas_arduino h2 {
+    font-size: 6.5em;
+    line-height: 1em;
+    margin: 0;
+    color: #ffffff;
+    font-family: Anton;
+    letter-spacing: 5px;
+    text-align: left;
+    max-width: 50%;
+}
+
+.entradasSaidas_arduino p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.4;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 40%;
+    margin-left: 30px;
+    /* controla a distância entre o título e o texto */
+}
+.entradasSaidas_arduino1 {
+    padding: 60px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.entradasSaidas_arduino1 h2 {
+    font-size: 6.5em;
+    line-height: 1em;
+    margin: 0;
+    color: #ffffff;
+    font-family: Anton;
+    letter-spacing: 5px;
+    text-align: left;
+    max-width: 50%;
+}
+
+.entradasSaidas_arduino1 p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.4;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 40%;
+    margin-left: 30px;
+    /* controla a distância entre o título e o texto */
+}
+
+.IMGentrada_saida_arduino {
+    width: 700px;
+    margin-bottom: 80px;
+}
+
+.scripts {
+    background-image: url("./img/fundo.png");
+    /* tua imagem de fundo */
+    background-size: cover;
+    /* cobre toda a área */
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* evita repetição */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    /* pra manter camadas */
+    align-items: center;
+    /* alinha verticalmente imagem e texto */
+    justify-content: center;
+    gap: 40px;
+    /* espaço entre o texto e a imagem */
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.scripts h2 {
+    font-size: 8em;
+    line-height: 125px;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    margin-bottom: 80px;
+    margin-top: 5rem;
+    color: #000000;
+    font-family: Anton;
+    letter-spacing: 2px;
+}
+
+.scripts p {
+    font-size: 1.2rem;
+    color: #111110;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.CONVERCOES {
+    font-size: 2em;
+    color: #000000;
+    border-radius: 10px;
+    padding: 10px 5px;
+    background-color: #1f1e1e00;
+    margin-bottom: 7rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*quando passa o botao do mouse*/
+.CONVERCOES:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 10px rgba(48, 47, 47, 0.3);
+    /*sombra em baixo do botão krl*/
+}
+
+.imagens11 {
+    display: flex;
+    height: 300px;
+    border: 8px #000000;
+    margin-bottom: 90px;
+}
+
+.imagens11 .texto {
+    font-size: 1rem;
+    margin-left: 60px;
+    align-items: center;
+    text-align: left;
+    padding-right: 100px;
+    padding-top: 100px;
+
+}
+
+.imagens11 .texto1 {
+    font-size: 1rem;
+    text-align: right;
+    margin-right: 60px;
+    align-items: center;
+    padding-left: 100px;
+    padding-top: 60px;
+}
+
 .sensores em {
     color: #aa0303;
 }
 
-.container-botao-script {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
 
-.botao-script {
-    background-color: #ffffff;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 10px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-    width: 250px;
-}
-
-.botao-script:hover {
-    background-color: #e6510c;
-    transform: scale(1.05);
-}
 
 footer {
     padding: 20px;
@@ -645,7 +816,7 @@ footer {
 
 @media (max-width: 480px) {
     .botoes .icones {
-    padding-left: 50px;
+    padding-left: 40px;
 }  
  .titulo{height: 30rem; padding-left: 40px;padding-right: 30px;}
   .titulo h1 { font-size: 3.5em; line-height: 3rem; word-spacing:250px; letter-spacing:3px; margin-bottom: 45px; overflow-wrap: break-word}

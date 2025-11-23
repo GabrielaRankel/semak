@@ -74,7 +74,7 @@ a:focus, button:focus {
 .secao-heroi h1 {
     font-size: 12em;
     font-family: Anton;
-    /*A PORCARIA DA FONTE QUE VOCÊ PSSOU MEIA HORA PROCURANDO*/
+    /*A PORCARIA DA FONTE */
     color: #fc6424;
     line-height: 12rem;
     /*ESPAÇO ENTRE AS LINHAS*/
@@ -90,7 +90,7 @@ a:focus, button:focus {
     font-style: italic;
     /* Deixa todo o texto dentro das tags <p> em itálico */
     font-family: Anton;
-    /*A PORCARIA DA FONTE QUE VOCÊ PSSOU MEIA HORA PROCURANDO*/
+    /*A PORCARIA DA FONTE*/
     color: #fc6424;
     line-height: 1px;
     letter-spacing: 4px;
@@ -110,7 +110,7 @@ a:focus, button:focus {
 .botao_marca:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(168, 0, 0, 0.3);
-    /*sombra em baixo do botão krl*/
+    /*sombra em baixo do botão*/
 }
 /* Linha rotativa */
 
@@ -224,8 +224,8 @@ a:focus, button:focus {
 
 /* Estilo do título h2 na seção do professor: tamanho médio e margem inferior */
 .secao-professor h2 {
-    font-size: 11em;
-    line-height: 163px;
+    font-size: 12em;
+    line-height: 179px;
     margin-top: 7rem;
     /* muda o espaço de cuima dela com a seção */
     margin-bottom: 0;
@@ -263,15 +263,40 @@ a:focus, button:focus {
     text-align: center;
     word-spacing: 8px;
 }
+/* CARROSSEL */
+.carrossel_professora {
+    position: relative;
+    width: 35rem;
+    height: 45rem; 
+    margin: 0 auto;
+}
+
+/* Todas as imagens dentro do carrossel */
+.carrossel_professora img {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    width: 35rem;
+    height: 45rem;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Mudei para 0.5s para ver mudanças mais rápidas */
+    z-index: 10;
+}
+
+/* A imagem que está aparecendo */
+.carrossel_professora img.active {
+    opacity: 1;
+}
 
 .img_professora {
     width: 35rem;
-    height: auto;
-    margin-top: -2rem;
-    /* valor negativo faz ela subir */
-    z-index: 2;
+    height: auto; 
+    /* margin-top: -2rem; */ /* Removido porque não funciona com position: absolute; usei top: -2rem acima */
+    z-index: 10; 
     padding-bottom: 11px;
 }
+
 
 /* Estilo do parágrafo na seção do professor: largura máxima para centralização */
 .secao-professor p {
