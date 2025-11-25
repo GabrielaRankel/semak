@@ -24,7 +24,7 @@
   </header>
   <h2>Ordenar Números de 1 a 20</h2>
   <button onclick="ordenar()">Mostrar</button>
-  <p id="resultado"></p>
+  <p id="res"></p>
 
   <script>
    let res = document.getElementById("res")
@@ -39,7 +39,7 @@ function gerarArray(min,max,n) {
     for (let i = 0; i < n; i++) {
         arr[i] = gerarAleatorio(min,max)
     }
-    res.innerHTML = ``                    // LIMPA UMA ÚNICA VEZ
+    res.innerHTML = ` `                    // LIMPA UMA ÚNICA VEZ
     res.innerHTML += `Array gerado: ${arr}<br>`
 }
 
@@ -61,7 +61,6 @@ function ordenarAraayCrescente(n) {
 
 function ordenar() {
     let min = 1, max = 20, n = 10
-
     gerarArray(min,max,n)
     ordenarAraayCrescente(n)
 }
