@@ -328,7 +328,6 @@ pre {
     overflow-x: auto;
     font-size: 1rem;
 }
-
 .funcionamento_arduino {
     background-image: url("./img/fundo.png");
     /* tua imagem de fundo */
@@ -364,6 +363,42 @@ pre {
 }
 
 .funcionamento_arduino p {
+    font-size: 1.2rem;
+    color: #111110;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.funcionamento_arduino1 {
+    padding: 60px 10%;
+    border-bottom: 2px solid #fc6424;
+    border-top: 2px solid #fc6424;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #0f0f0f;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.funcionamento_arduino1 h2 {
+    font-size: 8em;
+    line-height: 125px;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    margin-bottom: 80px;
+    margin-top: 5rem;
+    color: #e26511;
+    font-family: Anton;
+    letter-spacing: 2px;
+}
+
+.funcionamento_arduino1 p {
     font-size: 1.2rem;
     color: #111110;
     line-height: 1.5;
