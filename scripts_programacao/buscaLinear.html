@@ -27,16 +27,10 @@
   <p>lista = [3, 7, 12, 19, 5, 8, 15, 1, 9, 6];</p>
   <p>A busca linear percorre todos os elementos de uma lista, um por um, até encontrar o valor desejado. <br>É simples e
     eficiente para listas pequenas. <br>Lembre-se a lista começa em 0</p>
-          <h1>Busca Linear</h1>
-
-          <label for="valor">Número para buscar:</label>
-          <input type="number" id="valor" placeholder="Ex: 25">
-
-          <button onclick="btnBuscar()">Executar Busca</button>
-      </div>
+    <label for="valor">Número para buscar:</label>
+    <input type="number" id="valor" placeholder="Ex: 25">
+    <button onclick="btnBuscar()">Executar Busca</button>
       <div id="res"></div>
-  </div>
-  
   <script>
    let res = document.getElementById("res") //declaração as variáveis globais
 let arr = []
@@ -74,10 +68,10 @@ function btnBuscar() {
     // gerar um array novo sempre que buscar
     gerarArray(10, 1, 50)
 
-    let pos = buscaLinear(array, valor)
+    let pos = buscaLinear(arr, valor)
 
     res.innerHTML = `
-        <strong>Array Gerado:</strong> [${array.join(", ")}]<br><br>
+        <strong>Array Gerado:</strong> [${arr.join(", ")}]<br><br>
     `
 
     if (pos === -1) {
