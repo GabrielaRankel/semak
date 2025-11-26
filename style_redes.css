@@ -152,6 +152,46 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.sensores1 {
+    padding: 60px 10%;
+    /* tua imagem de fundo */
+    background-size: cover;
+    /* cobre toda a área */
+    background-position: center;
+    /* centraliza */
+    background-repeat: no-repeat;
+    /* evita repetição */
+    border-bottom: 2px solid #fc6424;
+}
+
+.sensores1 h2 {
+    font-size: 7em;
+    line-height: 120px;
+    /*ESPAÇO ENTRE AS LINHAS*/
+    margin-bottom: 80px;
+    margin-top: 5rem;
+    color: #fc6424;
+    font-family: Anton;
+    letter-spacing: 5px;
+}
+
+
+.sensores1 p {
+    /* font-weight:bold; */
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #111110;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sensores1 em {
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #111110;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .galeria {
     display: flex;
     flex-wrap: wrap;
@@ -219,8 +259,8 @@ body {
 
 .imagens1-fundoPreto {
     position: relative;
-    width: 280px;
-    height: 220px;
+    width: 390px;
+    height: 320px;
     border: 3px solid #000000;
     border-radius: 8px;
     overflow: hidden;
@@ -290,7 +330,7 @@ body {
 }
 
 .imagens-secao4 {
-    width: 4000px;
+    width: 3000px;
     border: 3px solid #e26511;
     border-radius: 8px;
 }
