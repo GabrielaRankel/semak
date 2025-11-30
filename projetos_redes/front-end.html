@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front-end</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>    <style>
+        pre {
+            background: #1e1e1e;
+            color: #dcdcdc;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 15px;
+            font-family: Consolas, "Courier New", monospace;
+        }
+        </style>
+<body>
+</head>
+<pre>
+    <code class="language-javascript">
+const btnLigar = document.getElementById("btnLigar")
+const btnDesligar = document.getElementById("btnDesligar")
+const statusDiv = document.getElementById("status")
+
+// Função para atualizar o texto do status
+function atualizarStatus(msg) {
+    statusDiv.textContent = "Status: " + msg
+
+    // Remove classes antigas para ajuste da cor
+    statusDiv.classList.remove("status-verde", "status-vermelho", "status-branco")
+
+    // Aplica cor conforme a mensagem
+    if (msg.toLowerCase() === "ligado") {
+        statusDiv.classList.add("status-verde")
+    } else if (msg.toLowerCase() === "desligado") {
+        statusDiv.classList.add("status-vermelho")
+    } else {
+        statusDiv.classList.add("status-branco") // aguardando 
+    }
+}
+
+// ----- Botão Ligar -----
+btnLigar.addEventListener("click", async () => {
+    try {
+        const resposta = await fetch("http://localhost:3000/ligar")
+        const json = await resposta.json()
+        atualizarStatus(json.led.toUpperCase())
+    } catch (error) {
+        atualizarStatus("Erro ao conectar")
+    }
+})
+
+// ----- Botão Desligar -----
+btnDesligar.addEventListener("click", async () => {
+    try {
+        const resposta = await fetch("http://localhost:3000/desligar");
+        const json = await resposta.json()
+        atualizarStatus(json.led.toUpperCase())
+    } catch (error) {
+        atualizarStatus("Erro ao conectar")
+    }
+})
+    </code>
+    </pre>
+</body>
+</html>

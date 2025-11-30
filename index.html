@@ -12,63 +12,64 @@
     <style>
         /*      ANIMAÇÃO     */
         .animate-up {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-out;
-    }
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
 
-    .animate-up.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+        .animate-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
 <body>
     <!-- ANIMAÇÃOOOOOO -->
     <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const allElements = document.querySelectorAll('body *');
+        document.addEventListener('DOMContentLoaded', () => {
+            const allElements = document.querySelectorAll('body *');
 
-    allElements.forEach(el => el.classList.add('animate-up'));
+            allElements.forEach(el => el.classList.add('animate-up'));
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
 
-    allElements.forEach(el => observer.observe(el));
-  });
-</script>
+            allElements.forEach(el => observer.observe(el));
+        });
+    </script>
 
     <!-- Cabeçalho principal com o nome do site -->
     <header>
-  <div class="botoes">
-    <a href="./index.html"><button>HOME</button></a>
-    <a href="./sobre_marca.html"><button>SEMAK</button></a>
-    <a href="https://www.whatsapp.com/?lang=pt" target="_blank">
-      <img src="./img/whatts.png" alt="WhatsApp" class="botao-imagem">
-    </a>
-    <a href="https://www.instagram.com/" target="_blank">
-      <img src="./img/insta.png" alt="Instagram" class="botao-imagem">
-    </a>
-  </div>
-</header>
+        <div class="botoes">
+            <a href="./index.html"><button>HOME</button></a>
+            <a href="./sobre_marca.html"><button>SEMAK</button></a>
+            <a href="https://www.whatsapp.com/?lang=pt" target="_blank">
+                <img src="./img/whatts.png" alt="WhatsApp" class="botao-imagem">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="./img/insta.png" alt="Instagram" class="botao-imagem">
+            </a>
+        </div>
+    </header>
 
     <!-- Seção herói: introdução impactante com título e subtítulo -->
     <section class="secao-heroi">
-        <h1>VENHA FAZER O <samp>CURSO</samp> DE <strong>DESENVOLVIMENTO</strong> DE <samp>SISTEMAS</samp> COM A GENTE</h1>
+        <h1>VENHA FAZER O <samp>CURSO</samp> DE <strong>DESENVOLVIMENTO</strong> DE <samp>SISTEMAS</samp> COM A GENTE
+        </h1>
         <a href="./sobre_marca.html"><button class="botao_marca"> --- TUDO A UM CLICK DE DISTÂNCIA ---- </button></a>
 
     </section>
     <!-- Aqui entra a linha -->
-<div class="marquee">
-  <span>Promoções da semana • Novos projetos • Atualizações do site</span>
-</div>
+    <div class="marquee">
+        <span>Promoções da semana • Novos projetos • Atualizações do site</span>
+    </div>
 
     <!-- Seção de ideia: texto explicativo sobre o conceito inicial -->
     <section class="secao-ideia">
@@ -87,17 +88,21 @@
             <img src="./img/ideia3.jpg" alt="" class="img_ideia">
         </a>
     </section>
-<section class="secao-professor">
-    <h2>CONHEÇA SUA <br> <span>PROFESSORA</span></h2>
-    <div class="carrossel_professora">
-        <img src="img/professora_023.jpeg" alt="Professora Gabriela - Foto 1" class="img_professora active">
-        <img src="img/professora1.jpeg" alt="Professora Gabriela - Foto 2" class="img_professora">
-        <img src="img/professora_024.jpeg" alt="Professora Gabriela - Foto 3" class="img_professora">
-        <img src="img/professora_025.jpeg" alt="Professora Gabriela - Foto 4" class="img_professora">
-        <img src="img/professora_026.jpeg" alt="Professora Gabriela - Foto 5" class="img_professora">
-    </div>
-    <p>"OLÁ! MEU NOME É GABRIELA E EU SOU PROFESSORA NA SEMAK HÁ 2 ANOS. DURANTE ESSE TEMPO, PUDE VER DE PERTO O QUANTO A EXPERIÊNCIA AQUI É DIFERENTE. A SEMAK NÃO É SÓ UM LUGAR PRA APRENDER — É UM AMBIENTE ONDE A GENTE COLOCA A MÃO NA MASSA, TROCA IDEIAS, ERRA, ACERTA E CRESCE JUNTO. MEUS ALUNOS SE ENVOLVEM DE VERDADE, PARTICIPAM, E SAEM DAQUI PRONTOS PRA APLICAR O QUE APRENDERAM NO DIA A DIA. TUDO É PENSADO PRA VOCÊ."<br> - VENHA CONOSCO NESSA! - </p>
-</section>
+    <section class="secao-professor">
+        <h2>CONHEÇA SUA <br> <span>PROFESSORA</span></h2>
+        <div class="carrossel_professora">
+            <img src="img/professora_023.jpeg" alt="Professora Gabriela - Foto 1" class="img_professora active">
+            <img src="img/professora1.jpeg" alt="Professora Gabriela - Foto 2" class="img_professora">
+            <img src="img/professora_024.jpeg" alt="Professora Gabriela - Foto 3" class="img_professora">
+            <img src="img/professora_025.jpeg" alt="Professora Gabriela - Foto 4" class="img_professora">
+            <img src="img/professora_026.jpeg" alt="Professora Gabriela - Foto 5" class="img_professora">
+        </div>
+        <p>"OLÁ! MEU NOME É GABRIELA E EU SOU PROFESSORA NA SEMAK HÁ 2 ANOS. DURANTE ESSE TEMPO, PUDE VER DE PERTO O
+            QUANTO A EXPERIÊNCIA AQUI É DIFERENTE. A SEMAK NÃO É SÓ UM LUGAR PRA APRENDER — É UM AMBIENTE ONDE A GENTE
+            COLOCA A MÃO NA MASSA, TROCA IDEIAS, ERRA, ACERTA E CRESCE JUNTO. MEUS ALUNOS SE ENVOLVEM DE VERDADE,
+            PARTICIPAM, E SAEM DAQUI PRONTOS PRA APLICAR O QUE APRENDERAM NO DIA A DIA. TUDO É PENSADO PRA VOCÊ."<br> -
+            VENHA CONOSCO NESSA! - </p>
+    </section>
 
     <!-- Primeira seção de curso: detalhes do curso principal -->
 
@@ -135,7 +140,8 @@
 
             <a href="REDES.html" class="caixa-conteudo">
                 <h3>Redes</h3>
-                <p>Entenda como computadores e dispositivos se conectam, trocam informações e formam a base da comunicação digital moderna.</p>
+                <p>Entenda como computadores e dispositivos se conectam, trocam informações e formam a base da
+                    comunicação digital moderna.</p>
             </a>
         </div>
         <br><br>
@@ -150,8 +156,8 @@
 
     <div class="marquee">
         <span>Promoções da semana • Novos projetos • Atualizações do site</span>
-      </div>
-      
+    </div>
+
     <!-- Seção de preços: opções de planos -->
     <section class="secao-precos">
         <h2>ESCOLHA UM PLANO</h2>
@@ -176,6 +182,84 @@
                 gmr2009br@gmail.com <br>
                 +55 (42) 98421-9818</span>
         </p>
+
+        <br><br><br>
+        <div class="cxCadastroContatoMaster">
+            <h2>Cadastro para Contato</h2>
+
+            <form class="formCadastroContato" id="formContatoID"> <br>
+
+                <label>Nome completo:</label> <br>
+                <input type="text" id="campoNomeContato" required> <br>
+
+                <label>Email:</label> <br>
+                <input type="email" id="campoEmailContato" required> <br>
+
+                <label>Telefone:</label> <br>
+                <input type="text" id="campoTelefoneContato" required> <br>
+
+                <label>Sua dúvida:</label> <br>
+                <textarea id="campoMensagemContato" required></textarea> <br>
+
+                <button type="submit" class="btnEnviarContato">Enviar</button> <br>
+            </form>
+
+            <div id="retornoContatoID" class="retornoCadastroContato"></div>
+        </div>
+        <script>
+            document.getElementById("formContatoID").addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const nome = document.getElementById("campoNomeContato").value;
+                const email = document.getElementById("campoEmailContato").value;
+                const telefone = document.getElementById("campoTelefoneContato").value;
+                const mensagem = document.getElementById("campoMensagemContato").value;
+
+                const box = document.getElementById("retornoContatoID");
+                box.style.display = "block";
+
+                box.innerHTML = `
+        <h3>Dados recebidos:</h3>
+        <p><strong>Nome:</strong> ${nome}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Telefone:</strong> ${telefone}</p>
+        <p><strong>Dúvida:</strong> ${mensagem}</p>
+        <p style="margin-top:12px; font-weight:bold;">Obrigado! Entrarei em contato em breve.</p>
+    `;
+            });
+        </script>
+       <style>
+    .cxCadastroContatoMaster {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+.dados_recebidos_cadastro{
+    font-size: 15px;
+}
+    input,
+    textarea {
+        display: block;
+        width: 200px; /* 80px era muito pequeno */
+        margin: 8px 0;
+        padding: 6px;
+    }
+
+    button {
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+    .retornoCadastroContato {
+    padding: 10px;
+    display: none;
+    width: 1000px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+}
+
+</style>
+
     </section>
 
     <!-- Rodapé: informações -->

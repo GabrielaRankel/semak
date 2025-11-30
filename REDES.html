@@ -35,8 +35,10 @@
     #aviso {
       position: fixed;
       color: white;
-      top: 20px;        /* agora no topo */
-      right: 20px;      /* canto superior direito */
+      top: 20px;
+      /* agora no topo */
+      right: 20px;
+      /* canto superior direito */
       background: #ff5e00d8;
       padding: 12px 18px;
       border-radius: 8px;
@@ -45,329 +47,412 @@
       font-size: 14px;
       opacity: 0;
       transition: opacity .4s ease;
-      pointer-events: none; /* só pra não atrapalhar nada */
+      pointer-events: none;
+      /* só pra não atrapalhar nada */
     }
-  
+
     #aviso.mostrar {
       opacity: 1;
     }
   </style>
-  
+
   </head>
+
   <body>
-  
-  <div id="aviso">Página interativa: passe o cursor pelas imagens.</div>
-  
-  <script>
-    const aviso = document.getElementById("aviso");
-    // aparece depois de 3 segundos
-    setTimeout(() => {
-      aviso.classList.add("mostrar");
-  
-      // some depois de ficar 5s visível
+
+    <div id="aviso">Página interativa: passe o cursor pelas imagens.</div>
+
+    <script>
+      const aviso = document.getElementById("aviso");
+      // aparece depois de 3 segundos
       setTimeout(() => {
-        aviso.classList.remove("mostrar");
-      }, 5000);
-  
-    }, 3000);
-  </script>
-  <!-- SEÇÃO 2 -->
+        aviso.classList.add("mostrar");
+
+        // some depois de ficar 5s visível
+        setTimeout(() => {
+          aviso.classList.remove("mostrar");
+        }, 5000);
+
+      }, 3000);
+    </script>
+    <!-- SEÇÃO 2 -->
     <section class="funcionamento_arduino1">
       <div class="imagens-secao5">
         <img src="./img/rede-de-computadores.jpg" alt="redes"> <!-- adicionar link -->
-        <p class="texto">As redes de computadores são o sistema nervoso da era digital, permitindo a comunicação e compartilhamento de informações em escala global. Compreender seus fundamentos é essencial para qualquer profissional de tecnologia.</p>
+        <p class="texto">As redes de computadores são o sistema nervoso da era digital, permitindo a comunicação e
+          compartilhamento de informações em escala global. Compreender seus fundamentos é essencial para qualquer
+          profissional de tecnologia.</p>
       </div>
       <h2>1. O que são Redes de Computadores?</h2>
     </section>
 
-  </section>
+    </section>
 
-  <!-- SEÇÃO 3 -->
-  <section class="sensores">
-    <h2> 2. Conceitos Fundamentais</h2>
-    <section class="galeria">
-      <div class="imagens1-fundoPreto">
-        <img src="./img/rede_minima.png" alt="rede_minima">
-        <p class="texto">O que é uma Rede mínima? <br>Uma rede mínima consiste em pelo menos dois dispositivos conectados, podendo ser dois computadores diretamente ligados por um cabo ou via wireless.
+    <!-- SEÇÃO 3 -->
+    <section class="sensores">
+      <h2> 2. Conceitos Fundamentais</h2>
+      <section class="galeria">
+        <div class="imagens1-fundoPreto">
+          <img src="./img/rede_minima.png" alt="rede_minima">
+          <p class="texto">O que é uma Rede mínima? <br>Uma rede mínima consiste em pelo menos dois dispositivos
+            conectados, podendo ser dois computadores diretamente ligados por um cabo ou via wireless.
+          </p>
+        </div>
+        <div class="imagens1-fundoPreto">
+          <img src="./img/internet_imagem.jpg" alt="Internet">
+          <p class="texto">O que é a Internet? O que a compõe? <br>A Internet é uma rede global de redes
+            interconectadas, composta por: <br>
+
+            Provedores de serviços (ISPs) <br>
+            Backbones de fibra óptica <br>
+            Data centers e servidores <br>
+            Dispositivos de usuários finais <br>
+            Roteadores e switches <br>
+            Protocolos de comunicação (TCP/IP)</p>
+        </div>
+
+        <div class="imagens1-fundoPreto">
+          <img src="./img/www.png" alt="www">
+          <p class="texto">O que é a Web? <br>A World Wide Web (WWW) é um sistema de informação que opera sobre a
+            Internet, utilizando o protocolo HTTP para acesso a documentos interligados por hyperlinks.</p>
+        </div>
+      </section>
+    </section>
+
+    <!-- SEÇÃO 4 -->
+    <section class="arduino">
+      <div class="texto-arduino">
+        <h2>3. Infraestrutura Global: Mapa de Fibra Óptica</h2>
+        <p>O que é o Mapa de Fibra Óptica? <br>
+          É a representação visual da rede global de cabos submarinos e terrestres que formam o backbone da Internet,
+          conectando continentes e países.
+
+          Características da Infraestrutura Global: <br>
+          Mais de 1,3 milhões de km de cabos submarinos
+          Conexões transoceânicas entre todos os continentes
+          Velocidades que chegam a terabits por segundo
+          Infraestrutura crítica para economia global
+          Investimentos bilionários em expansão contínua
         </p>
       </div>
-      <div class="imagens1-fundoPreto">
-        <img src="./img/internet_imagem.jpg" alt="Internet">
-        <p class="texto">O que é a Internet? O que a compõe? <br>A Internet é uma rede global de redes interconectadas, composta por: <br>
-
-          Provedores de serviços (ISPs) <br>
-          Backbones de fibra óptica <br>
-          Data centers e servidores <br>
-          Dispositivos de usuários finais <br>
-          Roteadores e switches <br>
-          Protocolos de comunicação (TCP/IP)</p>
-      </div>
-
-      <div class="imagens1-fundoPreto">
-        <img src="./img/www.png" alt="www">
-        <p class="texto">O que é a Web? <br>A World Wide Web (WWW) é um sistema de informação que opera sobre a Internet, utilizando o protocolo HTTP para acesso a documentos interligados por hyperlinks.</p>
+      <div class="imagens-secao4">
+        <img src="./img/mapa_fibra_otica.jpg" alt="">
       </div>
     </section>
-  </section>
 
-  <!-- SEÇÃO 4 -->
-  <section class="arduino">
-    <div class="texto-arduino">
-      <h2>3. Infraestrutura Global: Mapa de Fibra Óptica</h2>
-      <p>O que é o Mapa de Fibra Óptica? <br>
-        É a representação visual da rede global de cabos submarinos e terrestres que formam o backbone da Internet, conectando continentes e países.
-        
-        Características da Infraestrutura Global: <br>
-        Mais de 1,3 milhões de km de cabos submarinos
-        Conexões transoceânicas entre todos os continentes
-        Velocidades que chegam a terabits por segundo
-        Infraestrutura crítica para economia global
-        Investimentos bilionários em expansão contínua
+    <!-- SEÇÃO 5 -->
+    <section class="funcionamento_arduino">
+      <div class="imagens-secao5">
+        <img src="./img/osi-tcp-ip.png" alt="Funcionamento do Arduino"> <!-- adicionar link -->
+        <p class="texto">TCP/IP é melhor para uso real porque é o modelo implementado na internet. <br>
+
+          OSI é melhor para aprendizado porque separa mais funções e deixa tudo mais claro.</p>
+      </div>
+      <h2>4. Comparação entre modelo OSI x modelo TCP/IP?</h2>
+    </section>
+
+
+    <!-- SEÇÃO 5 -->
+    <section class="sensores1">
+      <h2> 5. Componentes de Hardware de Redes
+      </h2>
+      <section class="galeria">
+        <div class="imagens1-fundoPreto">
+          <img src="./img/roteador.jpg" alt="rede_minima">
+          <p class="texto">um dispositivo que encaminhe os pacotes de dados entre essas redes diferentes. Esse
+            dispositivo, chamado de roteador, utiliza o endereço IP para determinar o melhor caminho para enviar os
+            pacotes de dados da rede local para a internet e vice-versa.
+          </p>
+        </div>
+        <div class="imagens1-fundoPreto">
+          <img src="./img/cabos-de-rede.jpg" alt="Internet">
+          <p class="texto">Cabos UTP Cat5e, Cat6 ou Cat7 para conexão física
+          </p>
+        </div>
+
+        <div class="imagens1-fundoPreto">
+          <img src="./img/Switch.webp" alt="">
+          <p class="texto">Um switch é um dispositivo crucial para conectar computadores, impressoras e outros
+            dispositivos, permitindo que eles se comuniquem entre si. O switch é responsável por encaminhar pacotes de
+            dados para o destino correto dentro da rede com base no endereço MAC de cada dispositivo. Diferente de um
+            hub, o switch consegue enviar dados apenas para o dispositivo de destino, aumentando a eficiência da
+            comunicação.</p>
+        </div>
+        <div class="imagens1-fundoPreto">
+          <img src="./img/Access_Point.jpg" alt="">
+          <p class="texto">Estende a cobertura da rede Wi-Fi em áreas maiores
+
+          </p>
+        </div>
+        <div class="imagens1-fundoPreto">
+          <img src="./img/placa-rede-fibra-otica.webp" alt="">
+          <p class="texto">A placa de rede está associada à camada de enlace de dados, que é responsável pela
+            transmissão de quadros de dados dentro da rede local e pela comunicação com outros dispositivos.</p>
+        </div>
+      </section>
+    </section>
+
+
+
+    <!-- SEÇÃO 6 -->
+    <section class="linguagem_arduino1">
+      <div class="linguagem_arduino">
+        <h2>6. O modelo OSI (Open Systems Interconnection)</h2>
+        <p>Camada 7 - Aplicação: Interação direta com o usuário e software, como navegadores e e-mails. <br>
+
+          Camada 6 - Apresentação: Formatação, compressão e criptografia dos dados. <br>
+
+          Camada 5 - Sessão: Gerenciamento das sessões de comunicação entre os dispositivos. <br>
+
+          Camada 4 - Transporte: Controle da entrega de dados e correção de erros (TCP, UDP). <br>
+
+          Camada 3 - Rede: Roteamento dos pacotes entre diferentes redes (IP). <br>
+
+          Camada 2 - Enlace de Dados: Transmissão de quadros de dados entre dispositivos na mesma rede (Ethernet). <br>
+
+          Camada 1 - Física: Transmissão física dos dados através do meio de comunicação, como cabos e ondas de rádio.
+          <br></p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 7 -->
+    <section class="entradasSaidas_arduino">
+      <p>Um protocolo de comunicação é um conjunto de regras que define como dois dispositivos trocam dados em uma rede.
+        Ele estabelece como a informação será enviada, recebida, interpretada e confirmada, garantindo que todos os
+        equipamentos consigam “falar a mesma língua”.
+        Em resumo: protocolo = regras para comunicação funcionar corretamente entre dispositivos.
+        Exemplos: HTTP, HTTPS, TCP, IP, FTP, SMTP.</p>
+      <h2>7. O que é um protocolo de comunicação?</h2>
+    </section>
+
+    <!-- SEÇÃO 8 -->
+    <section class="entradasSaidas_arduino1">
+      <h2>8. O que é o protocolo IP V4 ? e o IP V6?</h2>
+      <p><strong>Protocolo IPv4</strong><br>
+        É a quarta versão do IP (Internet Protocol).<br>
+        Define como os endereços de dispositivos são representados na rede.<br>
+        Usa endereços de 32 bits, no formato:<br>
+        192.168.0.1<br>
+        Quantidade total: cerca de 4,3 bilhões de endereços.<br>
+        Está próximo do esgotamento.<br>
+        <br>
+        <strong>Protocolo IPv6</strong><br>
+        É a sexta versão do IP, criado para substituir o IPv4.<br>
+        Usa endereços de 128 bits, no formato:<br>
+        2001:0db8:85a3:0000:0000:8a2e:0370:7334<br>
+        Quantidade total: aproximadamente 3,4 × 10³⁸ endereços (muito maior que o IPv4).<br>
+        Mais seguro, mais rápido no roteamento e mais moderno.<br>
+        <br>
       </p>
-    </div>
-    <div class="imagens-secao4">
-      <img src="./img/mapa_fibra_otica.jpg" alt="">
-    </div>
-  </section>
-
-  <!-- SEÇÃO 5 -->
-  <section class="funcionamento_arduino">
-    <div class="imagens-secao5">
-      <img src="./img/osi-tcp-ip.png" alt="Funcionamento do Arduino"> <!-- adicionar link -->
-      <p class="texto">fgergregrgry54</p>
-    </div>
-    <h2>4. Comparação entre modelo OSI x modelo TCP/IP?</h2>
-  </section>
-
-
-  <!-- SEÇÃO 5 -->
-  <section class="sensores1">
-    <h2> 5. Componentes de Hardware de Redes
-    </h2>
-    <section class="galeria">
-      <div class="imagens1-fundoPreto">
-        <img src="./img/roteador.jpg" alt="rede_minima">
-        <p class="texto">um dispositivo que encaminhe os pacotes de dados entre essas redes diferentes. Esse dispositivo, chamado de roteador, utiliza o endereço IP para determinar o melhor caminho para enviar os pacotes de dados da rede local para a internet e vice-versa.
-        </p>
-      </div>
-      <div class="imagens1-fundoPreto">
-        <img src="./img/cabos-de-rede.jpg" alt="Internet">
-        <p class="texto">Cabos UTP Cat5e, Cat6 ou Cat7 para conexão física
-        </p>
-      </div>
-
-      <div class="imagens1-fundoPreto">
-        <img src="./img/Switch.webp" alt="">
-        <p class="texto">Um switch é um dispositivo crucial para conectar computadores, impressoras e outros dispositivos, permitindo que eles se comuniquem entre si. O switch é responsável por encaminhar pacotes de dados para o destino correto dentro da rede com base no endereço MAC de cada dispositivo. Diferente de um hub, o switch consegue enviar dados apenas para o dispositivo de destino, aumentando a eficiência da comunicação.</p>
-      </div>
-      <div class="imagens1-fundoPreto">
-        <img src="./img/Access_Point.jpg" alt="">
-        <p class="texto">Estende a cobertura da rede Wi-Fi em áreas maiores
-
-        </p>
-      </div>
-      <div class="imagens1-fundoPreto">
-        <img src="./img/placa-rede-fibra-otica.webp" alt="">
-        <p class="texto">A placa de rede está associada à camada de enlace de dados, que é responsável pela transmissão de quadros de dados dentro da rede local e pela comunicação com outros dispositivos.</p>
-      </div>
     </section>
-  </section>
 
 
+    <!-- SEÇÃO 9 -->
+    <section class="scripts">
 
-  <!-- SEÇÃO 6 -->
-  <section class="linguagem_arduino1">
-    <div class="linguagem_arduino">
-      <h2>6. O modelo OSI (Open Systems Interconnection)</h2>
-      <p>Camada 7 - Aplicação: Interação direta com o usuário e software, como navegadores e e-mails. <br>
+      <h2>10. Como é configurado o IP e o TCP em uma programação backend com node.js?</h2>
 
-        Camada 6 - Apresentação: Formatação, compressão e criptografia dos dados. <br>
-        
-        Camada 5 - Sessão: Gerenciamento das sessões de comunicação entre os dispositivos. <br>
-        
-        Camada 4 - Transporte: Controle da entrega de dados e correção de erros (TCP, UDP). <br>
-        
-        Camada 3 - Rede: Roteamento dos pacotes entre diferentes redes (IP). <br>
-        
-        Camada 2 - Enlace de Dados: Transmissão de quadros de dados entre dispositivos na mesma rede (Ethernet). <br>
-        
-        Camada 1 - Física: Transmissão física dos dados através do meio de comunicação, como cabos e ondas de rádio. <br></p>
-    </div>
-    <img src="./img/python_c++.png" alt="" class="img">
-  </section>
+      <div class="bloco">
+        <h3><strong>Configuração de IP e Porta (TCP) em Node.js — <br>Servidor HTTP</strong></h3>
+        <div class="caixa-codigo">
+          <pre>
+<code>
+const http = require('http');
 
-  <!-- SEÇÃO 7 -->
-  <section class="entradasSaidas_arduino">
-    <p>As entradas e saídas digitais no Arduino são fundamentais para a interação do microcontrolador com o mundo
-      externo. As <strong>entradas digitais</strong> permitem que o Arduino receba sinais que possuem apenas dois
-      estados possíveis, geralmente representados por alto (HIGH) ou baixo (LOW), correspondendo a <strong>tensões de 5V
-        ou 0V</strong>, respectivamente. Isso é útil para detectar o acionamento de botões, sensores digitais ou
-      interruptores. Já as <strong>saídas digitais</strong> permitem que o Arduino envie sinais nesses mesmos dois
-      estados, controlando dispositivos como LEDs, relés ou pequenos motores. Combinando entradas e saídas digitais, é
-      possível criar sistemas interativos, automatizados e inteligentes, tornando o Arduino uma ferramenta poderosa para
-      projetos eletrônicos e prototipagem rápida.</p>
-    <h2>6. ENTRADAS e Saídas DIGITAIS no Arduíno</h2>
-  </section>
-  <img src="./img/arduino_entradas_saidas.png" alt="" class="IMGentrada_saida_arduino">
-  <!-- SEÇÃO 8 -->
-  <section class="entradasSaidas_arduino1">
-    <h2>7. Entradas e Saídas ANALÓGICAS no Arduíno</h2>
-    <p>As entradas e saídas analógicas no Arduino permitem trabalhar com sinais contínuos, ou seja, valores que podem
-      variar dentro de um intervalo específico, ao contrário das digitais, que têm apenas dois estados. As entradas
-      analógicas utilizam o <strong>conversor analógico-digital (ADC)</strong> do Arduino para transformar sinais de
-      tensão em <strong>valores numéricos que o microcontrolador consegue processar</strong>, geralmente variando de 0 a
-      1023 para tensões entre 0V e 5V. Isso é útil para ler sensores como <strong>potenciômetros, sensores de
-        temperatura ou luminosidade</strong>, que retornam valores graduais. Já as saídas analógicas, na prática, são
-      sinais de <strong>PWM (Pulse Width Modulation)</strong>, que simulam variações de tensão permitindo
-      <strong>controlar a intensidade de LEDs, a velocidade de motores ou a posição de servomotores</strong>. Assim, as
-      entradas e saídas analógicas <strong>ampliam muito as possibilidades de controle e medição</strong> em projetos
-      eletrônicos com Arduino.
-    </p>
-  </section>
+const IP = '127.0.0.1';
+const PORT = 3000;
 
+const server = http.createServer((req, res) => {
+  res.end('Servidor rodando!');
+});
 
-  <!-- SEÇÃO 9 -->
-  <section class="scripts">
-    <h2>8. Script: Lei de Ohm</h2>
-    <a href="./convercoes.html"><button class="CONVERCOES"> --- CLICK PARA CALCULAR ---- </button></a>
-  </section>
-
-
-  <!-- SEÇÃO 11 -->
-  <section class="arduino">
-    <h2>10. Leitura de Sensor Analógico e Acionamento de Saída Digital</h2>
-
-    <style>
-      .container {
-        position: relative;
-        width: 50%;
-      }
-
-      .image {
-        display: block;
-        width: 330px;
-        height: auto;
-      }
-
-      .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: #ffffff;
-      }
-
-      .container:hover .overlay {
-        opacity: 1;
-      }
-
-      .text {
-        color: rgb(0, 0, 0);
-        font-size: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-      @media (max-width: 1370px){
-        .image {
-        display: block;
-        width: 300px;
-        height: auto;
-      }
-    }
-      @media (max-width: 450px) {
-
-  .container {
-    width: 80%;
-  }
-
-  .text {
-    font-size: 16px;
-  }
-}
-      
-    </style>
-    <body>
-
-
-      <div class="container">
-        <p class="image">// Exemplo de código Arduino <br>
-          int sensor = A0; <br>
-          int led = 13; <br>
-          void setup() { <br>
-            pinMode(led, OUTPUT); <br>
-            Serial.begin(9600); <br>
-          } <br>
-          void loop() { <br>
-            int valor = analogRead(sensor); <br>
-            if (valor > 500) digitalWrite(led, HIGH); <br>
-            else digitalWrite(led, LOW); <br>
-            Serial.println(valor); <br>
-            delay(100); <br>
-          }</p>
-        <div class="overlay">
-          <div class="text">Este é um código Arduino simples que lê um valor de um sensor analógico (conectado ao pino
-            A0) e controla um LED (conectado ao pino 13) baseado nesse valor.</div>
+server.listen(PORT, IP, () => {
+  console.log(`Rodando em http://${IP}:${PORT}`);
+});
+</code>
+  </pre>
         </div>
       </div>
 
-    </body>
+      <div class="bloco">
+        <h3><strong>Configuração de TCP puro <br>(sem HTTP)</strong></h3>
+        <div class="caixa-codigo">
+          <pre>
+<code>
+const net = require('net');
 
-</html>
-</code></pre>
-</section>
+const IP = '0.0.0.0';
+const PORT = 4000;
 
-<!-- SEÇÃO 12 -->
-<section class="sensores">
-  <h2>11. Diodo, e Display de 7 Segmentos</h2>
-  <p><strong>O <em>diodo</em> permite a passagem de corrente em apenas um sentido. O <em>diodo LED</em> emite
-      luz ao conduzir corrente. O <em>display de 7 segmentos</em> usa LEDs organizados para exibir números e
-      caracteres simples. </strong></p>
-  <br><br><br>
-  <section class="galeria">
-    <div class="imagens11">
-      <img src="./img/display_7_seguimentos_arduino.jpg" alt="DISPLAY DE & SEGMENTOS">
-      <p class="texto"><strong>Um display de 7 segmentos é um dispositivo eletrônico usado para mostrar números e
-          algumas letras de forma simples. Ele é formado por 7 LEDs individuais (ou segmentos) dispostos em forma de
-          “8”, que podem acender em combinações diferentes para formar dígitos</strong></p>
+const server = net.createServer((socket) => {
+  console.log('Cliente conectado');
+
+  socket.write('Conexão TCP estabelecida!');
+
+  socket.on('data', (data) => {
+    console.log('Recebido:', data.toString());
+  });
+});
+
+server.listen(PORT, IP, () => {
+  console.log(`Servidor TCP rodando em ${IP}:${PORT}`);
+});
+</code>
+  </pre>
+        </div>
+      </div>
+      <div class="bloco">
+        <h3><strong>Configuração com Express.js</strong></h3>
+        <pre>
+<code>
+        <div class="caixa-codigo">
+const express = require('express');
+const app = express();
+
+const IP = '0.0.0.0';
+const PORT = 8080;
+
+app.get('/', (req, res) => {
+  res.send('API funcionando!');
+});
+
+app.listen(PORT, IP, () => {
+  console.log(`API em http://${IP}:${PORT}`);
+});
+</div>
+</div>
+<div class="bloco">
+    <h3><strong>Como o IP é escolhido na prática</strong></h3><br>
+</code>
+  </pre>
+        <div class="letra">
+          127.0.0.1 → acessível só localmente<br>
+          0.0.0.0 → recebe conexões de qualquer IP<br>
+          IP interno da rede → ex.: 192.168.x.x<br>
+          IP público → servidores em nuvem
+        </div>
+      </div>
+      <style>
+        .scripts {
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          flex-wrap: wrap;
+        }
+
+        .bloco {
+          text-align: center;
+        }
+
+        .letra {
+          color: #111;
+        }
+
+        .bloco h3 {
+          margin-bottom: 10px;
+          font-weight: bold;
+          color: #111;
+          font-size: 20px;
+        }
+
+        .caixa-codigo {
+          width: 500px;
+          /* tamanho do quadrado */
+          height: 500px;
+          /* tamanho do quadrado */
+          background: #111;
+          padding: 10px;
+          border-radius: 12px;
+          overflow: auto;
+          /* scroll automático */
+        }
+
+        pre {
+          margin: 0;
+          color: #ec6f15;
+          /* cor do código */
+          font-size: 15px;
+        }
+      </style>
+    </section>
+
+
+
+    <!-- SEÇÃO 11 -->
+    <section class="arduino">
+      <h2>11. O que é o protocolo HTTP? E o HTTPS ?</h2>
+      <p>HTTP<br>
+        É um protocolo usado para transferir páginas e dados na web.<br>
+        Define como navegador e servidor trocam informações.<br>
+        Não possui criptografia.<br>
+        <br>
+        HTTPS<br>
+        É a versão segura do HTTP.<br>
+        Usa criptografia SSL/TLS para proteger os dados enviados e recebidos.<br>
+        Impede espionagem, roubo de informações e alterações no tráfego.<br>
+        <br>
+        Resumo:<br>
+        HTTP = sem segurança<br>
+        HTTPS = comunicação criptografada e protegida
+      </p>
+    </section>
+
+    <!-- SEÇÃO 12 -->
+    <section class="sensores">
+      <section class="topico">
+        <div class="projeto-redes">
+  <h2>Nosso projeto de redes - eletroeletrônica</h2>
+
+  <div class="projetos-grid">  <!-- SOMENTE UMA GRID -->
+
+    <div class="projeto-item">
+      <h1 class="titulo_do_projeto">Interface front-end</h1>
+      <div class="projeto-midia">
+        <img src="./img/frontEndRedes.png">
+      </div>
+      <a href="./projetos_redes/front-end.html" target="_blank" class="btn-codigo">Clique para ver</a>
+      <p>Esse código cria um servidor básico usando o framework Express no Node.js. Ele importa o Express, inicia uma aplicação, define uma rota principal que responde quando alguém acessa o endereço do servidor e, por fim, inicia a execução na porta configurada, permitindo que o navegador ou outros sistemas enviem requisições HTTP e recebam respostas. 
+</p>
     </div>
 
-    <div class="imagens11">
-      <p class="texto1"><strong>Tipos de displays <br>
-          Anodo comum (Common Anode - CA): <br>
-          Todos os anodos dos LEDs estão conectados juntos.
-          Para acender um segmento, aplica-se LOW (0V) no segmento. <br>
-          Catodo comum (Common Cathode - CC): <br>
-          Todos os catodos estão conectados juntos.
-          Para acender um segmento, aplica-se HIGH (5V) no segmento.</strong></p>
-      <img src="./img/diodo_7_segmentos.jpeg" alt="LEDs" >
+    <div class="projeto-item">
+      <h1 class="titulo_do_projeto">Interface back-end</h1>
+      <div class="projeto-midia">
+        <img src="./img/backEndRedes.png">
+      </div>
+      <a href="./projetos_redes/back-end.html" target="_blank" class="btn-codigo">Clique para ver</a>
+      <p>Esse código cria um servidor Node.js que se comunica diretamente com um Arduino pela porta serial. Ele configura a conexão (porta, baud rate), recebe dados enviados pelo Arduino, permite enviar comandos manualmente pelo teclado e disponibiliza duas rotas HTTP (/ligar e /desligar) que mandam instruções ao Arduino para ativar ou desativar algo, como um LED.</p>
     </div>
 
-    <div class="imagens11">
-      <img src="./img/display7segmentos.jpg" alt="Arduino" class="img_cll_dfeito">
-      <p class="texto"><strong> Funcionamento: <br>
-          Cada segmento é controlado individualmente.
-          Combinando quais segmentos acendem, é possível mostrar números de 0 a 9 e algumas letras (como A, b, C, d, E,
-          F).
-          Exemplo: Para formar o “8”, todos os segmentos são acesos; para o “1”, apenas os segmentos b e c
-          acendem.</strong></p>
+    <div class="projeto-item">
+      <h1 class="titulo_do_projeto">Vídeo funcionando localmente</h1>
+      <div class="projeto-midia">
+        <img src="./img/localmente.jpg">
+      </div>
+      <a href="./img/video-redes.mp4" target="_blank" class="btn-codigo">Clique para ver</a>
+      <p><br><br>Projeto do liga led funcionando de forma local através da IDE Arduino com o código C++ recém exportado e o teste realizado com o servidor local desenolvido em Back-End <br><br></p>
     </div>
-  </section>
-</section>
-</main>
+    <div class="projeto-item">
+      <h1 class="titulo_do_projeto">vídeo funcionando em Front e Back</h1>
+      <div class="projeto-midia">
+        <img src="./img/postman.jpg">
+      </div>
+      <a href="./img/video-redes.mp4" target="_blank" class="btn-codigo">Clique para ver</a>
+      <p><br><br>Projeto liga led funcionando através de codigos em Front-End e Back-End<br><br></p>
+    </div>
 
-<footer>
-  <p>© 2025 Fundamentos de Eletroeletrônica — GABRIELA RANKEL</p>
-</footer>
-</body>
+  </div> <!-- fecha a ÚNICA grid -->
+
+</div>
+
+
+      </section>
+    </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Fundamentos de Eletroeletrônica — GABRIELA RANKEL</p>
+    </footer>
+  </body>
 
 </html>

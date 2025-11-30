@@ -1,4 +1,3 @@
-/* Estilo geral do corpo da página: fonte, margens, cor de fundo e espaçamento de linhas */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,8 +7,8 @@ body {
     line-height: 1.6;
 }
 
-/* Estilo do cabeçalho: fundo branco, padding, centralizado e sombra para profundidade */
 header {
+  margin-left: 15px;
     background-color: #111110;
     padding: 20px;
     /* position: fixed; */
@@ -507,9 +506,8 @@ a:focus, button:focus {
     font-size: 8.5em;
     line-height: 130px;
     margin-top: 8rem;
-    /* muda o espaço de cuima dela com a seção */
+    margin-left: 4rem;
     margin-bottom: 7rem;
-    /* tira o espaço inferior par img ficar em cima  */
     color: #111110;
     font-family: Anton;
     text-align: left;

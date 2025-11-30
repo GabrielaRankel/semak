@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>back-end</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>    <style>
+        pre {
+            background: #1e1e1e;
+            color: #dcdcdc;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 15px;
+            font-family: Consolas, "Courier New", monospace;
+        }
+        </style>
+<body>
+</head>
+<pre>
+    <code class="language-javascript">
+const express = require('express')
+const app = express()
+const { SerialPort, ReadlineParser } = require('serialport')
+
+const cors = require('cors')
+const readline = require('readline')
+
+const PORT = 3000 // port do protocolo TCP
+const hostname = 'localhost' // nome do computador e seu ip = 127.0.0.1 (IP de teste)
+
+const BAUD_RATE = 9600
+const SERIAL_PORT = "COM4"
+
+//------------------------ middleware ----------------
+
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+app.use(cors())
+
+// ------------ inicializando arduino ----------------
+
+const arduino = new SerialPort({
+    path: SERIAL_PORT, 
+    baudRate: BAUD_RATE,
+})
+
+const parserDados =  arduino.pipe(new ReadlineParser({delimiter: "\r\n"}))
+
+arduino.on("open",()=>{
+    console.log(`conectado ao arduino em ${SERIAL_PORT}`)
+})
+
+arduino.on("error", (err)=>{
+    console.error('erro  comunicação serial', err)
+})
+
+//----------- parser das linhas: garantir recepção completa dos dados ------------
+
+parserDados.on("dados",(dad)=>{
+    const linha = dad.toString().trim()
+
+    if(linha>0){
+        console.log('arduino: ', linha)
+    }
+})
+
+//------------------ leitura do teclado para testes manuais -------------------------
+
+const teclado = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+})
+
+teclado.on("line",(input)=>{
+    const comando2 = input.trim()
+
+    if(comando2 === 's' || comando2 === 'd'){
+        arduino.write(comando2, (err)=>{
+            if(err){
+                console.error("Erro ao enviar o comando pelo teclado", err)
+            }else{
+                console.log(`comando: ${comando2} enviado ao arduino via teclado`)
+            }
+        })
+    }else{
+        console.log("digite 's' (ligar) ou 'd' (desligar)")
+    }
+})
+
+//--------------------- programando as rotas HTTP -> endpoints -------------------
+
+app.get('/ligar',(req,res)=>{
+    arduino.write("s", (err)=>{
+        if(err){
+            console.error("erro ao escrever no arduino: ", err)
+            return res.status(500).json({led:"erro", detalhe: "falha ao enviar o comando"})
+        }
+    })
+    res.status(200).json({led: "ligado"})
+})
+
+app.get('/desligar',(req,res)=>{
+    arduino.write("d", (err)=>{
+        if(err){
+            console.error("erro ao escrever no arduino: ", err)
+            return res.status(500).json({led:"erro", detalhe: "falha ao enviar o comando"})
+        }
+    })
+    res.status(200).json({led: "desligado"})
+})
+
+app.listen(PORT,hostname,()=>{
+    console.log(`servidor rodando em ${hostname}:${PORT}`)
+    console.log("digite 's' (ligar) ou 'd' (desligar)")
+    console.log('-------------------------------------')
+})
+    </code>
+    </pre>
+</body>
+</html>
